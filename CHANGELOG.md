@@ -1,4 +1,4 @@
-# Changelog - Casa Victoria Website Updates
+# Changelog - Villa Victorina Website Updates
 
 ## Update 2: Dubbele Gallery Structuur - 2 januari 2026
 
@@ -227,7 +227,7 @@ const remainingPhotos = photos.slice(10);
 
 <!-- Footer -->
 <footer>
-  <p>© 2026 Casa Victoria</p>
+  <p>© 2026 Villa Victorina</p>
   <a href="...">Boek Direct</a>
 </footer>
 ```

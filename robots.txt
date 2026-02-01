@@ -1,4 +1,4 @@
-# robots.txt for Casa Victoria Fuerteventura
+# robots.txt for Villa Victorina Fuerteventura
 # This file tells search engine crawlers which pages to crawl and which to avoid
 
 User-agent: *
@@ -9,7 +9,7 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://casavictoria-fuerteventura.com/sitemap.xml
+Sitemap: https://villavictorinafuerteventura.com/sitemap.xml
 
 # Crawl-delay (optional, helps prevent server overload)
 # Crawl-delay: 1

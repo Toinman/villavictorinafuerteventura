@@ -1,10 +1,10 @@
-# Casa Victoria El Roque
+# Villa Victorina El Roque
 
-Een moderne, hoogwaardige statische website voor vakantieverhuur van Casa Victoria in El Roque, Fuerteventura. Gebouwd met pure HTML en CSS, volledig geoptimaliseerd voor performance, accessibility en SEO.
+Een moderne, hoogwaardige statische website voor vakantieverhuur van Villa Victorina in El Roque, Fuerteventura. Gebouwd met pure HTML en CSS, volledig geoptimaliseerd voor performance, accessibility en SEO.
 
 ## 🏠 Over het Project
 
-Casa Victoria El Roque is een elegante vakantievilla gelegen in El Roque, Fuerteventura. De accommodatie beschikt over 3 slaapkamers, 3 badkamers en een verwarmd binnenzwembad. Deze website is ontworpen als een stijlvolle one-pager die de unieke faciliteiten en locatie van de villa presenteert met focus op visuele presentatie en gebruiksvriendelijkheid.
+Villa Victorina El Roque is een elegante vakantievilla gelegen in El Roque, Fuerteventura. De accommodatie beschikt over 3 slaapkamers, 3 badkamers en een verwarmd binnenzwembad. Deze website is ontworpen als een stijlvolle one-pager die de unieke faciliteiten en locatie van de villa presenteert met focus op visuele presentatie en gebruiksvriendelijkheid.
 
 ### Property Details
 - **Locatie**: El Roque, Fuerteventura
@@ -144,7 +144,7 @@ De site gebruikt een gratis Google Maps embed voor de locatie sectie. Dit is vol
 Om de exacte locatie aan te passen, vervang de `src` URL in de iframe (index.html, locatie sectie):
 
 1. Ga naar [Google Maps](https://www.google.com/maps)
-2. Zoek de exacte locatie van Casa Victoria El Roque
+2. Zoek de exacte locatie van Villa Victorina El Roque
 3. Klik op "Delen" → "Kaart insluiten"
 4. Kopieer de iframe code
 5. Vervang de huidige iframe src in `index.html`
@@ -176,7 +176,7 @@ De footer is geoptimaliseerd voor minimale ruimte:
 ### Stap 3: Custom Domain (Optioneel)
 1. Voeg een `CNAME` file toe aan de root met je custom domain:
    ```
-   casavictoria-fuerteventura.com
+   villavictorinafuerteventura.com
    ```
 2. Configureer je DNS settings bij je domain provider:
    - Type: `CNAME`
@@ -191,7 +191,7 @@ Update de volgende URLs in de bestanden naar je echte domain:
 - `sitemap.xml`: Alle `<loc>` tags
 - `robots.txt`: Sitemap URL
 
-Zoek en vervang: `https://casavictoria-fuerteventura.com/`
+Zoek en vervang: `https://villavictorinafuerteventura.com/`
 
 ## 📸 Afbeeldingen Toevoegen
 
@@ -268,7 +268,7 @@ Vervang in `index.html` alle placeholder URLs:
 
 ### AI Search Engine Testing
 Test of AI modellen je content kunnen vinden:
-- Vraag aan ChatGPT: "Wat weet je over Casa Victoria Fuerteventura?"
+- Vraag aan ChatGPT: "Wat weet je over Villa Victorina Fuerteventura?"
 - Zoek in Perplexity naar je villa
 - Test of de structured data correct wordt gelezen
 
@@ -343,7 +343,7 @@ Voor vragen of problemen:
 
 ## 📄 Licentie
 
-© 2026 Casa Victoria Fuerteventura. Alle rechten voorbehouden.
+© 2026 Villa Victorina Fuerteventura. Alle rechten voorbehouden.
 
 ---
 

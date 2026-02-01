@@ -4,45 +4,45 @@
     
     <!-- Homepage -->
     <url>
-        <loc>https://casavictoria-fuerteventura.com/</loc>
+        <loc>https://villavictorinafuerteventura.com/</loc>
         <lastmod>2026-01-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         
         <!-- Images for rich snippets -->
         <image:image>
-            <image:loc>https://casavictoria-fuerteventura.com/images/hero.jpg</image:loc>
-            <image:title>Casa Victoria El Roque - Luxe Vakantievilla</image:title>
+            <image:loc>https://villavictorinafuerteventura.com/images/hero.jpg</image:loc>
+            <image:title>Villa Victorina El Roque - Luxe Vakantievilla</image:title>
             <image:caption>Elegante villa in El Roque met verwarmd binnenzwembad</image:caption>
         </image:image>
         
         <image:image>
-            <image:loc>https://casavictoria-fuerteventura.com/images/living-room.jpg</image:loc>
-            <image:title>Woonkamer Casa Victoria El Roque</image:title>
+            <image:loc>https://villavictorinafuerteventura.com/images/living-room.jpg</image:loc>
+            <image:title>Woonkamer Villa Victorina El Roque</image:title>
             <image:caption>Ruime woonkamer met moderne inrichting</image:caption>
         </image:image>
         
         <image:image>
-            <image:loc>https://casavictoria-fuerteventura.com/images/pool.jpg</image:loc>
-            <image:title>Verwarmd Binnenzwembad Casa Victoria</image:title>
+            <image:loc>https://villavictorinafuerteventura.com/images/pool.jpg</image:loc>
+            <image:title>Verwarmd Binnenzwembad Villa Victorina</image:title>
             <image:caption>Privé verwarmd binnenzwembad het hele jaar geopend</image:caption>
         </image:image>
         
         <image:image>
-            <image:loc>https://casavictoria-fuerteventura.com/images/bedroom.jpg</image:loc>
-            <image:title>Slaapkamer Casa Victoria</image:title>
+            <image:loc>https://villavictorinafuerteventura.com/images/bedroom.jpg</image:loc>
+            <image:title>Slaapkamer Villa Victorina</image:title>
             <image:caption>Luxe slaapkamer met kingsize bed</image:caption>
         </image:image>
         
         <image:image>
-            <image:loc>https://casavictoria-fuerteventura.com/images/kitchen.jpg</image:loc>
-            <image:title>Keuken Casa Victoria</image:title>
+            <image:loc>https://villavictorinafuerteventura.com/images/kitchen.jpg</image:loc>
+            <image:title>Keuken Villa Victorina</image:title>
             <image:caption>Moderne volledig uitgeruste keuken</image:caption>
         </image:image>
         
         <image:image>
-            <image:loc>https://casavictoria-fuerteventura.com/images/terrace.jpg</image:loc>
-            <image:title>Terras Casa Victoria</image:title>
+            <image:loc>https://villavictorinafuerteventura.com/images/terrace.jpg</image:loc>
+            <image:title>Terras Villa Victorina</image:title>
             <image:caption>Ruim terras met spectaculair zeezicht</image:caption>
         </image:image>
     </url>

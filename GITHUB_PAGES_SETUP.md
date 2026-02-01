@@ -11,8 +11,8 @@
 1. Ga naar [github.com](https://github.com) en log in
 2. Klik op het **"+"** icoon rechtsboven → **"New repository"**
 3. Vul in:
-   - **Repository name**: `casavictoria` (of een andere naam)
-   - **Description**: "Casa Victoria El Roque - Luxury private villa website"
+   - **Repository name**: `villavictorina` (of een andere naam)
+   - **Description**: "Villa Victorina El Roque - Luxury private villa website"
    - **Visibility**: Public (vereist voor gratis GitHub Pages)
    - **⚠️ NIET aanvinken**: "Add a README file", "Add .gitignore", "Choose a license"
 4. Klik **"Create repository"**
@@ -96,7 +96,7 @@ Als je een eigen domein wilt gebruiken:
 
 1. Maak een `CNAME` bestand in de root:
    ```
-   casavictoria-fuerteventura.com
+   villavictorinafuerteventura.com
    ```
 
 2. Commit en push:
