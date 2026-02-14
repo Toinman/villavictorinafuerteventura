@@ -893,6 +893,8 @@
             lightboxTitle.textContent = place.title;
             lightboxDesc.textContent = place.text;
             lightboxCounter.textContent = (currentPlaceIndex + 1) + ' / ' + places.length;
+            lightboxCredit.innerHTML = place.creditHTML;
+            lightboxCredit.style.display = place.creditHTML ? '' : 'none';
         }
 
         function showPrevPlace() {
