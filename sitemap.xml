@@ -1,51 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-    
+
     <!-- Homepage -->
     <url>
         <loc>https://villavictorinafuerteventura.com/</loc>
-        <lastmod>2026-01-02</lastmod>
+        <lastmod>2026-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        
+
         <!-- Images for rich snippets -->
         <image:image>
-            <image:loc>https://villavictorinafuerteventura.com/images/hero.jpg</image:loc>
-            <image:title>Villa Victorina El Roque - Luxe Vakantievilla</image:title>
-            <image:caption>Elegante villa in El Roque met verwarmd binnenzwembad</image:caption>
+            <image:loc>https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg</image:loc>
+            <image:title>Villa Victorina El Roque - Luxury Vacation Rental</image:title>
+            <image:caption>Elegant villa in El Roque with heated outdoor pool</image:caption>
         </image:image>
-        
+
         <image:image>
-            <image:loc>https://villavictorinafuerteventura.com/images/living-room.jpg</image:loc>
-            <image:title>Woonkamer Villa Victorina El Roque</image:title>
-            <image:caption>Ruime woonkamer met moderne inrichting</image:caption>
+            <image:loc>https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-17.jpg</image:loc>
+            <image:title>Living Room Villa Victorina El Roque</image:title>
+            <image:caption>Spacious living room with modern furnishings</image:caption>
         </image:image>
-        
+
         <image:image>
-            <image:loc>https://villavictorinafuerteventura.com/images/pool.jpg</image:loc>
-            <image:title>Verwarmd Binnenzwembad Villa Victorina</image:title>
-            <image:caption>Privé verwarmd binnenzwembad het hele jaar geopend</image:caption>
+            <image:loc>https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-45.jpg</image:loc>
+            <image:title>Bedroom Villa Victorina</image:title>
+            <image:caption>Luxury bedroom with king-size bed</image:caption>
         </image:image>
-        
+
         <image:image>
-            <image:loc>https://villavictorinafuerteventura.com/images/bedroom.jpg</image:loc>
-            <image:title>Slaapkamer Villa Victorina</image:title>
-            <image:caption>Luxe slaapkamer met kingsize bed</image:caption>
+            <image:loc>https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-115.jpg</image:loc>
+            <image:title>Heated Outdoor Pool Villa Victorina</image:title>
+            <image:caption>Private heated outdoor pool open year-round</image:caption>
         </image:image>
-        
+
         <image:image>
-            <image:loc>https://villavictorinafuerteventura.com/images/kitchen.jpg</image:loc>
-            <image:title>Keuken Villa Victorina</image:title>
-            <image:caption>Moderne volledig uitgeruste keuken</image:caption>
+            <image:loc>https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-62.jpg</image:loc>
+            <image:title>Kitchen Villa Victorina</image:title>
+            <image:caption>Modern fully equipped kitchen</image:caption>
         </image:image>
-        
+
         <image:image>
-            <image:loc>https://villavictorinafuerteventura.com/images/terrace.jpg</image:loc>
-            <image:title>Terras Villa Victorina</image:title>
-            <image:caption>Ruim terras met spectaculair zeezicht</image:caption>
+            <image:loc>https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-21.jpg</image:loc>
+            <image:title>Terrace Villa Victorina</image:title>
+            <image:caption>Spacious terrace with spectacular views</image:caption>
         </image:image>
     </url>
-    
-</urlset>
 
+</urlset>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,14 +18,14 @@
     <meta property="og:url" content="https://villavictorinafuerteventura.com/">
     <meta property="og:title" content="Villa Victorina El Roque - Private Villa with Heated Outdoor Pool">
     <meta property="og:description" content="Elegant private villa in El Roque with 3 bedrooms, 3 bathrooms and heated outdoor pool. Fully equipped with AC, WiFi and modern kitchen.">
-    <meta property="og:image" content="https://villavictorinafuerteventura.com/images/og-image.jpg">
+    <meta property="og:image" content="https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://villavictorinafuerteventura.com/">
     <meta property="twitter:title" content="Villa Victorina El Roque - Private Villa with Heated Outdoor Pool">
     <meta property="twitter:description" content="Elegant private villa in El Roque with 3 bedrooms, 3 bathrooms and heated outdoor pool. Fully equipped with AC, WiFi and modern kitchen.">
-    <meta property="twitter:image" content="https://villavictorinafuerteventura.com/images/og-image.jpg">
+    <meta property="twitter:image" content="https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg">
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,26 +103,32 @@
     <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
     
-    <!-- Structured Data - JSON-LD -->
+    <!-- Structured Data - JSON-LD (VacationRental) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "House",
+        "@type": "VacationRental",
         "name": "Villa Victorina El Roque",
         "description": "Elegant private villa in El Roque with three bedrooms, three bathrooms and a heated outdoor pool. The property features a terrace, WiFi, private parking and is fully equipped with all modern amenities for a comfortable stay.",
+        "url": "https://villavictorinafuerteventura.com/",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "El Roque",
             "addressRegion": "Fuerteventura, Canary Islands",
             "addressCountry": "ES"
         },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.68574212663537",
+            "longitude": "-13.990865409927036"
+        },
         "image": [
-            "https://villavictorinafuerteventura.com/images/hero.jpg",
-            "https://villavictorinafuerteventura.com/images/living-room.jpg",
-            "https://villavictorinafuerteventura.com/images/bedroom.jpg",
-            "https://villavictorinafuerteventura.com/images/pool.jpg",
-            "https://villavictorinafuerteventura.com/images/kitchen.jpg",
-            "https://villavictorinafuerteventura.com/images/terrace.jpg"
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-17.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-21.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-45.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-62.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-115.jpg"
         ],
         "amenityFeature": [
             {
@@ -178,27 +184,7 @@
             "value": "150",
             "unitCode": "MTK"
         },
-        "petsAllowed": false
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LodgingBusiness",
-        "name": "Villa Victorina El Roque",
-        "image": "https://villavictorinafuerteventura.com/images/hero.jpg",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "El Roque",
-            "addressRegion": "Fuerteventura, Canary Islands",
-            "addressCountry": "ES"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "28.68574212663537",
-            "longitude": "-13.990865409927036"
-        },
+        "petsAllowed": false,
         "priceRange": "€€€"
     }
     </script>
@@ -234,8 +220,8 @@
     <header class="hero" role="banner">
         <div class="hero__image-container">
             <img
-                src="images/Villa El Roque - Noogar Design -111.jpg"
-                alt="Villa Victorina El Roque -  3 bedroom villa with heated outdoor pool in El Roque, Fuerteventura"
+                src="images/large/Villa El Roque - Noogar Design -111.jpg"
+                alt="Villa Victorina El Roque - 3 bedroom villa with heated outdoor pool in El Roque, Fuerteventura"
                 class="hero__image"
                 fetchpriority="high">
         </div>
@@ -398,7 +384,7 @@
         <!-- CTA Section -->
         <section id="reserveer" class="cta" aria-labelledby="cta-heading">
             <div class="cta__background">
-                <img src="images/Villa El Roque - Noogar Design -115.jpg" alt="Villa Victorina El Roque pool view" class="cta__image" loading="lazy">
+                <img src="images/thumbs/Villa El Roque - Noogar Design -115.jpg" alt="Villa Victorina El Roque pool view" class="cta__image" loading="lazy">
                 <div class="cta__overlay"></div>
             </div>
             <div class="container cta__container">
@@ -726,7 +712,7 @@
             top12Photos.forEach((photo, i) => {
                 const actualIndex = photos.indexOf(photo);
                 const img = document.createElement('img');
-                img.src = `images/${photo}`;
+                img.src = `images/thumbs/${photo}`;
                 img.alt = `Villa Victorina El Roque - Foto ${actualIndex + 1}`;
                 img.className = 'gallery__photo';
                 img.loading = 'eager'; // All top 12 eager load
@@ -747,7 +733,7 @@
             remainingPhotos.forEach((photo, i) => {
                 const actualIndex = photos.indexOf(photo);
                 const img = document.createElement('img');
-                img.src = `images/${photo}`;
+                img.src = `images/thumbs/${photo}`;
                 img.alt = `Villa Victorina El Roque - Foto ${actualIndex + 1}`;
                 img.className = 'gallery__photo';
                 img.loading = 'lazy';
@@ -780,7 +766,7 @@
         
         // Update lightbox image
         function updateLightbox() {
-            lightboxImage.src = `images/${photos[currentIndex]}`;
+            lightboxImage.src = `images/large/${photos[currentIndex]}`;
             lightboxImage.alt = `Villa Victorina El Roque - Foto ${currentIndex + 1}`;
             lightboxCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
         }
