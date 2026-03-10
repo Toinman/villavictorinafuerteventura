@@ -866,6 +866,7 @@ body.nav-open {
     font-size: var(--font-size-lg);
     line-height: var(--line-height-loose);
     color: var(--color-stone-light);
+    text-align: center;
 }
 
 /* Owner / Meet Your Host */
