@@ -858,6 +858,8 @@ body.nav-open {
    =================================== */
 .description {
     background-color: var(--color-white);
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-2xl);
 }
 
 .description__intro {
