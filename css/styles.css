@@ -522,8 +522,8 @@ body.nav-open {
 }
 
 .gallery--top {
-    padding-top: var(--spacing-md);
-    padding-bottom: var(--spacing-md);
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
 }
 
 .gallery--full {
@@ -729,7 +729,7 @@ body.nav-open {
     }
 
     .gallery--top {
-        padding-top: var(--spacing-xs);
+        padding-top: var(--spacing-sm);
         padding-bottom: var(--spacing-sm);
     }
 
@@ -870,7 +870,9 @@ body.nav-open {
 
 /* Owner / Meet Your Host */
 .owner {
-    margin-bottom: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    padding-top: var(--spacing-lg);
 }
 
 .owner__content {
@@ -881,7 +883,7 @@ body.nav-open {
 }
 
 .owner__image-wrapper {
-    max-width: 400px;
+    max-width: 320px;
     margin: 0 auto;
 }
 
@@ -932,6 +934,131 @@ body.nav-open {
     font-size: var(--font-size-sm);
     color: var(--color-stone-light);
     font-style: italic;
+}
+
+/* Interior Flyover - Full-bleed interior hero image */
+.interior-flyover {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 70vh;
+    min-height: 400px;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.interior-flyover__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.interior-flyover__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        rgba(0, 0, 0, 0.55) 100%
+    );
+}
+
+.interior-flyover__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-lg) var(--container-padding);
+    z-index: 2;
+}
+
+.interior-flyover__title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: var(--font-size-2xl);
+    color: var(--color-white);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .interior-flyover {
+        height: 60vh;
+        max-height: 600px;
+    }
+    .interior-flyover__title {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    .interior-flyover {
+        height: 70vh;
+        max-height: 700px;
+    }
+}
+
+/* Interior Carousel - Horizontal scroll gallery */
+.interior-carousel {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    margin-bottom: var(--spacing-xl);
+}
+
+.interior-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.interior-carousel__track {
+    display: flex;
+    gap: 4px;
+    padding: 0 4px;
+}
+
+.interior-carousel__slide {
+    flex: 0 0 55vw;
+    height: 200px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    border-radius: var(--radius-sm);
+}
+
+.interior-carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .interior-carousel__slide {
+        flex: 0 0 35vw;
+        height: 260px;
+    }
+
+    .interior-carousel__track {
+        gap: 6px;
+        padding: 0 6px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .interior-carousel__slide {
+        flex: 0 0 28vw;
+        height: 300px;
+    }
+
+    .interior-carousel__track {
+        gap: 8px;
+        padding: 0 8px;
+    }
 }
 
 /* Scenery Flyover - Full-bleed drone image */
@@ -2800,7 +2927,7 @@ body.nav-open {
     }
 
     .owner__image-wrapper {
-        max-width: none;
+        max-width: 380px;
     }
 
     .features__grid {
