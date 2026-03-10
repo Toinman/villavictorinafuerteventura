@@ -343,6 +343,17 @@
                     </div>
                 </div>
 
+                <!-- Scroll-Driven Video -->
+                <div class="scroll-video">
+                    <div class="scroll-video__sticky">
+                        <video class="scroll-video__media" src="Video/villa-victorina-walkthrough.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+                        <div class="scroll-video__overlay"></div>
+                        <div class="scroll-video__progress" aria-hidden="true">
+                            <div class="scroll-video__progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Instagram Feed -->
                 <div class="instagram">
                     <h3 class="instagram__title">Follow Us on Instagram</h3>
@@ -1038,6 +1049,82 @@
                 else showPrevPlace();
             }
         }, { passive: true });
+    })();
+    </script>
+
+    <!-- Scroll-Driven Video Controller -->
+    <script>
+    (function() {
+        'use strict';
+
+        // Bail out if user prefers reduced motion
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var container = document.querySelector('.scroll-video');
+        var video = container ? container.querySelector('.scroll-video__media') : null;
+        var progressBar = container ? container.querySelector('.scroll-video__progress-bar') : null;
+
+        if (!container || !video) return;
+
+        var ticking = false;
+        var videoDuration = 0;
+        var isVisible = false;
+
+        // Get duration when metadata loads
+        video.addEventListener('loadedmetadata', function() {
+            videoDuration = video.duration;
+        });
+
+        // Handle cached video (metadata already loaded)
+        if (video.readyState >= 1) {
+            videoDuration = video.duration;
+        }
+
+        // Only track scroll when container is in viewport
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                isVisible = entry.isIntersecting;
+            });
+        }, { threshold: 0 });
+
+        observer.observe(container);
+
+        function onScroll() {
+            if (!ticking) {
+                requestAnimationFrame(updateVideoTime);
+                ticking = true;
+            }
+        }
+
+        function updateVideoTime() {
+            ticking = false;
+            if (!isVisible || videoDuration === 0) return;
+
+            var rect = container.getBoundingClientRect();
+            var scrollTravel = container.offsetHeight - window.innerHeight;
+            if (scrollTravel <= 0) return;
+
+            var scrolled = -rect.top;
+            var progress = Math.max(0, Math.min(1, scrolled / scrollTravel));
+
+            // Set video time (skip tiny changes to avoid redundant seeks)
+            try {
+                var targetTime = progress * videoDuration;
+                if (Math.abs(video.currentTime - targetTime) > 0.03) {
+                    video.currentTime = targetTime;
+                }
+            } catch (e) {}
+
+            // Update progress bar
+            if (progressBar) {
+                progressBar.style.width = (progress * 100) + '%';
+            }
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        // Initial check for mid-scroll page loads
+        onScroll();
     })();
     </script>
 
