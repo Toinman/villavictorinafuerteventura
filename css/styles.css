@@ -1495,6 +1495,7 @@ body.nav-open {
     justify-content: center;
     overflow: hidden;
     margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
     width: 100vw;
     margin-left: calc(-50vw + 50%);
 }
@@ -1570,7 +1571,8 @@ body.nav-open {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-.btn--outline-light {
+.btn--outline-light,
+.btn--outline-light:visited {
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
@@ -1588,8 +1590,10 @@ body.nav-open {
     white-space: nowrap;
 }
 
-.btn--outline-light:hover {
+.btn--outline-light:hover,
+.btn--outline-light:focus {
     border-color: var(--color-white);
+    color: var(--color-white);
     background: rgba(255, 255, 255, 0.12);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
