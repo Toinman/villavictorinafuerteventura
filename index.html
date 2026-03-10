@@ -218,8 +218,26 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     -->
     
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+        </button>
+        <div class="nav__overlay" id="nav-menu" aria-hidden="true">
+            <ul class="nav__list">
+                <li><a href="/" class="nav__link nav__link--active">Home</a></li>
+                <li><a href="/fuerteventura-history.html" class="nav__link">Fuerteventura History</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <header class="hero" role="banner">
+    <header class="hero" role="banner" id="main-content">
         <div class="hero__image-container">
             <img
                 src="images/large/Villa El Roque - Noogar Design -111.jpg"
@@ -722,6 +740,10 @@
             <div class="container">
                 <div class="footer__content">
                     <p class="footer__text">&copy; 2026 Villa Victorina El Roque</p>
+                    <nav class="footer__nav" aria-label="Footer navigation">
+                        <a href="/" class="footer__link">Home</a>
+                        <a href="/fuerteventura-history.html" class="footer__link">Fuerteventura History</a>
+                    </nav>
                     <a href="https://arcotrust-holidaylettings.com/property/153-casa-victoria-el-roque/" class="btn btn--secondary" target="_blank" rel="nofollow noopener noreferrer" aria-label="Our local rental partner">
                         Availability and Prices
                     </a>
@@ -1155,6 +1177,9 @@
         }
     })();
     </script>
+
+    <!-- Menu -->
+    <script src="js/menu.js" defer></script>
 
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "35cdca1045834adeb18d1348f831998f"}'></script>
