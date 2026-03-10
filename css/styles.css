@@ -2049,6 +2049,25 @@ body.nav-open {
     margin-top: 0;
 }
 
+.article__attribution {
+    font-size: 0.7rem;
+    color: var(--color-stone-light);
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 0.2em;
+    line-height: 1.4;
+}
+
+.article__attribution a {
+    color: var(--color-stone-light);
+    text-decoration: none;
+}
+
+.article__attribution a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
 .article__section strong {
     color: var(--color-stone);
     font-weight: 600;
