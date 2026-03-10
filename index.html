@@ -208,6 +208,8 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
     -->
+    <!-- Preload video for instant scroll-driven playback -->
+    <link rel="preload" as="video" href="Video/villa-victorina-walkthrough.mp4" type="video/mp4">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) - Placeholder -->
@@ -1052,79 +1054,105 @@
     })();
     </script>
 
-    <!-- Scroll-Driven Video Controller -->
+    <!-- Scroll-Driven Video: autoplay + scroll-velocity boost, no scroll hijacking -->
     <script>
     (function() {
         'use strict';
 
-        // Bail out if user prefers reduced motion
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
         var container = document.querySelector('.scroll-video');
         var video = container ? container.querySelector('.scroll-video__media') : null;
         var progressBar = container ? container.querySelector('.scroll-video__progress-bar') : null;
-
         if (!container || !video) return;
 
-        var ticking = false;
-        var videoDuration = 0;
-        var isVisible = false;
+        // ── Config ──
+        var BASE_RATE      = 0.8;   // Playback speed when idle (no scrolling)
+        var SCROLL_MULT    = 0.008; // Extra rate per px/s of scroll speed
+        var MAX_RATE       = 4;     // Playback rate cap
+        var VELOCITY_SMOOTH = 0.85; // Smoothing factor for velocity measurement
 
-        // Get duration when metadata loads
-        video.addEventListener('loadedmetadata', function() {
-            videoDuration = video.duration;
-        });
+        // ── State ──
+        var isVisible      = false;
+        var scrollVelocity = 0;
+        var lastScrollY    = window.pageYOffset;
+        var lastTime       = performance.now();
+        var rafId          = null;
 
-        // Handle cached video (metadata already loaded)
-        if (video.readyState >= 1) {
-            videoDuration = video.duration;
-        }
-
-        // Only track scroll when container is in viewport
+        // ── Intersection Observer: play when visible, pause when not ──
         var observer = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    startPlayback();
+                } else if (!video.paused) {
+                    video.pause();
+                    stopLoop();
+                }
             });
-        }, { threshold: 0 });
-
+        }, { threshold: 0.15 });
         observer.observe(container);
 
-        function onScroll() {
-            if (!ticking) {
-                requestAnimationFrame(updateVideoTime);
-                ticking = true;
-            }
+        function startPlayback() {
+            if (video.readyState < 2 || !video.paused) return;
+            video.playbackRate = BASE_RATE;
+            video.play().catch(function() {});
+            lastScrollY = window.pageYOffset;
+            lastTime = performance.now();
+            if (!rafId) rafId = requestAnimationFrame(tick);
         }
 
-        function updateVideoTime() {
-            ticking = false;
-            if (!isVisible || videoDuration === 0) return;
-
-            var rect = container.getBoundingClientRect();
-            var scrollTravel = container.offsetHeight - window.innerHeight;
-            if (scrollTravel <= 0) return;
-
-            var scrolled = -rect.top;
-            var progress = Math.max(0, Math.min(1, scrolled / scrollTravel));
-
-            // Set video time (skip tiny changes to avoid redundant seeks)
-            try {
-                var targetTime = progress * videoDuration;
-                if (Math.abs(video.currentTime - targetTime) > 0.03) {
-                    video.currentTime = targetTime;
-                }
-            } catch (e) {}
-
-            // Update progress bar
-            if (progressBar) {
-                progressBar.style.width = (progress * 100) + '%';
-            }
+        function stopLoop() {
+            if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
         }
 
-        window.addEventListener('scroll', onScroll, { passive: true });
+        // ── Animation loop: measure scroll velocity → adjust playback rate ──
+        function tick(now) {
+            if (!isVisible) { rafId = null; return; }
 
-        // Initial check for mid-scroll page loads
-        onScroll();
+            var dt = (now - lastTime) / 1000;
+            lastTime = now;
+
+            // Measure scroll speed (px/s)
+            var currentY = window.pageYOffset;
+            if (dt > 0 && dt < 0.1) {
+                var instant = Math.abs(currentY - lastScrollY) / dt;
+                scrollVelocity = scrollVelocity * VELOCITY_SMOOTH + instant * (1 - VELOCITY_SMOOTH);
+            }
+            lastScrollY = currentY;
+
+            // Map velocity → playback rate
+            var rate = BASE_RATE + scrollVelocity * SCROLL_MULT;
+            video.playbackRate = Math.min(MAX_RATE, rate);
+
+            // Decay when idle
+            if (scrollVelocity < 1) scrollVelocity = 0;
+
+            // Progress bar
+            if (progressBar && video.duration) {
+                progressBar.style.width = (video.currentTime / video.duration * 100) + '%';
+            }
+
+            // Loop when ended
+            if (video.ended) {
+                video.currentTime = 0;
+                video.play().catch(function() {});
+            }
+
+            rafId = requestAnimationFrame(tick);
+        }
+
+        // ── Init ──
+        function init() {
+            // If already visible (e.g. mid-page load), start
+            if (isVisible && video.readyState >= 2) startPlayback();
+        }
+
+        if (video.readyState >= 1) {
+            init();
+        } else {
+            video.addEventListener('canplay', init, { once: true });
+        }
     })();
     </script>
 

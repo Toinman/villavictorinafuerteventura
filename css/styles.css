@@ -910,16 +910,16 @@ section {
     position: relative;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    height: 300vh;
+    height: 80vh;
+    min-height: 400px;
     margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
+    overflow: hidden;
 }
 
 .scroll-video__sticky {
-    position: sticky;
-    top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -929,6 +929,7 @@ section {
     object-fit: cover;
     object-position: center;
     display: block;
+    transform: translateZ(0);
 }
 
 .scroll-video__overlay {
@@ -1845,7 +1846,7 @@ section {
     }
 
     .scroll-video {
-        height: 350vh;
+        height: 85vh;
     }
     
     .hero__title {
@@ -1951,16 +1952,6 @@ section {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
-    }
-
-    .scroll-video {
-        height: auto;
-    }
-
-    .scroll-video__sticky {
-        position: relative;
-        height: 70vh;
-        min-height: 400px;
     }
 
     .scroll-video__progress {
