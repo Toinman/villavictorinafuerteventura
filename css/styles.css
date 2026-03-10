@@ -945,6 +945,7 @@ body.nav-open {
     min-height: 400px;
     max-height: 700px;
     overflow: hidden;
+    margin-bottom: var(--spacing-xl);
 }
 
 .interior-flyover__image {
