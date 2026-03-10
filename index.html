@@ -226,7 +226,7 @@
                 fetchpriority="high">
         </div>
         <div class="hero__content">
-            <h1 class="hero__title">Villa Victorina <br /> El Roque</h1>
+            <h1 class="hero__title">Villa Victorina <br><span class="hero__title-sub">El Roque</span></h1>
             <a href="#reserveer" class="btn btn--outline btn--large" aria-label="Book your stay at Villa Victorina El Roque">
                 Availability and Prices
             </a>
@@ -249,6 +249,12 @@
                     <path d="M243.6,148.8a6,6,0,0,1-8.4-1.2A53.58,53.58,0,0,0,192,126a6,6,0,0,1,0-12,26,26,0,1,0-25.18-32.5,6,6,0,0,1-11.62-3,38,38,0,1,1,59.91,39.63A65.69,65.69,0,0,1,244.8,140.4,6,6,0,0,1,243.6,148.8ZM189.19,213a6,6,0,0,1-2.19,8.2,5.9,5.9,0,0,1-3,.81,6,6,0,0,1-5.2-3,59,59,0,0,0-101.62,0,6,6,0,1,1-10.38-6A70.1,70.1,0,0,1,103,182.55a46,46,0,1,1,50.1,0A70.1,70.1,0,0,1,189.19,213ZM128,178a34,34,0,1,0-34-34A34,34,0,0,0,128,178ZM70,120a6,6,0,0,0-6-6A26,26,0,1,1,89.18,81.49a6,6,0,1,0,11.62-3,38,38,0,1,0-59.91,39.63A65.69,65.69,0,0,0,11.2,140.4a6,6,0,1,0,9.6,7.2A53.58,53.58,0,0,1,64,126,6,6,0,0,0,70,120Z"/>
                 </svg>
                 <span class="hero__feature-label">6 Guests</span>
+            </div>
+            <div class="hero__feature-item">
+                <svg class="hero__feature-icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M240,210H222V131.17l5.76,5.76a6,6,0,0,0,8.48-8.49L137.9,30.09a14,14,0,0,0-19.8,0L19.76,128.44a6,6,0,0,0,8.48,8.49L34,131.17V210H16a6,6,0,0,0,0,12H240a6,6,0,0,0,0-12ZM46,119.17l80.58-80.59a2,2,0,0,1,2.84,0L210,119.17V210H158V152a6,6,0,0,0-6-6H104a6,6,0,0,0-6,6v58H46ZM146,210H110V158h36Z"/>
+                </svg>
+                <span class="hero__feature-label">Built 2026</span>
             </div>
         </div>
     </header>
@@ -300,6 +306,39 @@
                                 </a>
                             </div>
                             <p class="owner__note">Based in Flanders, Belgium · Speaks English & Dutch</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenery and Views - Full-bleed drone flyover -->
+                <div class="scenery-flyover">
+                    <img src="images/Scenery/Villa El Roque - Noogar Design -2-topview.jpg" alt="Aerial drone view of Villa Victorina El Roque showing the villa, pool and surrounding Fuerteventura landscape" class="scenery-flyover__image" loading="lazy" width="1600" height="1067">
+                    <div class="scenery-flyover__overlay"></div>
+                    <div class="scenery-flyover__content">
+                        <h3 class="scenery-flyover__title">Scenery & Views</h3>
+                    </div>
+                </div>
+
+                <!-- Scenery Carousel -->
+                <div class="scenery-carousel">
+                    <div class="scenery-carousel__track">
+                        <div class="scenery-carousel__slide">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -3.jpg" alt="Villa Victorina with pool and Fuerteventura mountain landscape" class="scenery-carousel__image" loading="lazy">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -6.jpg" alt="Villa Victorina surrounded by the volcanic desert landscape of Fuerteventura" class="scenery-carousel__image" loading="lazy">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -15.jpg" alt="View from the terrace across the pool towards El Roque village and mountains" class="scenery-carousel__image" loading="lazy">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -17.jpg" alt="Indoor-outdoor living with views through sliding doors to pool and landscape" class="scenery-carousel__image" loading="lazy">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -64.jpg" alt="Pool terrace with villa architecture and mountain backdrop" class="scenery-carousel__image" loading="lazy">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -62.jpg" alt="Covered terrace with lounge furniture overlooking pool and landscape" class="scenery-carousel__image" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -737,9 +776,9 @@
             'Villa El Roque - Noogar Design -119.jpg'
         ];
         
-        // Top 12 photos (first 12 from photos array - includes 1 portrait + 1 landscape extra)
-        const top12Photos = photos.slice(0, 12);
-        const remainingPhotos = photos.slice(12);
+        // Top 5 photos shown above the fold
+        const top12Photos = photos.slice(0, 5);
+        const remainingPhotos = photos.slice(5);
         
         let currentIndex = 0;
         let touchStartX = 0;

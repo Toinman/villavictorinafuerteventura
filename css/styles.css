@@ -197,25 +197,44 @@ img {
 }
 
 .btn--outline {
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.35) 100%
+    );
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
     color: var(--color-white);
-    border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    padding: 0.75rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    padding: 0.85rem 2.5rem;
     font-size: var(--font-size-base);
+    border-radius: 80px;
+    letter-spacing: 0.02em;
 }
 
 .btn--outline:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.28) 50%,
+        rgba(0, 0, 0, 0.45) 100%
+    );
     color: var(--color-white);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .btn--outline.btn--large {
-    padding: 0.75rem 2rem;
+    padding: 0.85rem 2.5rem;
     font-size: var(--font-size-base);
 }
 
@@ -279,15 +298,28 @@ section {
     color: var(--color-white);
     padding: var(--spacing-lg);
     max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 60%;
 }
 
 .hero__title {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: var(--font-size-xl);
     color: var(--color-white);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
     font-weight: 400;
+    line-height: 1.1;
+}
+
+.hero__title-sub {
+    display: block;
+    font-size: 0.55em;
+    letter-spacing: 0.05em;
+    margin-top: 0.1em;
 }
 
 .hero__subtitle {
@@ -324,8 +356,8 @@ section {
 }
 
 .hero__feature-icon {
-    width: 56px;
-    height: 56px;
+    width: 36px;
+    height: 36px;
     color: var(--color-white);
     opacity: 0.95;
     fill: currentColor;
@@ -333,10 +365,10 @@ section {
 
 .hero__feature-label {
     font-family: 'Montserrat', sans-serif;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-sm);
     color: var(--color-white);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -517,7 +549,7 @@ section {
     }
     
     .hero__title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: var(--spacing-xs);
     }
     
@@ -532,12 +564,12 @@ section {
     }
     
     .hero__feature-icon {
-        width: 32px;
-        height: 32px;
+        width: 20px;
+        height: 20px;
     }
-    
+
     .hero__feature-label {
-        font-size: var(--font-size-sm);
+        font-size: 0.65rem;
     }
     
     section {
@@ -729,6 +761,142 @@ section {
     font-size: var(--font-size-sm);
     color: var(--color-stone-light);
     font-style: italic;
+}
+
+/* Scenery Flyover - Full-bleed drone image */
+.scenery-flyover {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 70vh;
+    min-height: 400px;
+    max-height: 700px;
+    overflow: hidden;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.scenery-flyover__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.scenery-flyover__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.05) 40%,
+        rgba(0, 0, 0, 0.05) 60%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+}
+
+.scenery-flyover__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+}
+
+.scenery-flyover__title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: var(--font-size-3xl);
+    font-weight: 400;
+    color: var(--color-white);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    letter-spacing: 0.04em;
+}
+
+@media (min-width: 768px) {
+    .scenery-flyover {
+        height: 75vh;
+        min-height: 500px;
+        max-height: 800px;
+    }
+
+    .scenery-flyover__title {
+        font-size: var(--font-size-4xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    .scenery-flyover {
+        height: 80vh;
+        max-height: 900px;
+    }
+}
+
+/* Scenery Carousel */
+.scenery-carousel {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    margin-bottom: var(--spacing-xl);
+}
+
+.scenery-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.scenery-carousel__track {
+    display: flex;
+    gap: 4px;
+    padding: 0 4px;
+}
+
+.scenery-carousel__slide {
+    flex: 0 0 55vw;
+    height: 200px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    border-radius: var(--radius-sm);
+}
+
+.scenery-carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .scenery-carousel__slide {
+        flex: 0 0 35vw;
+        height: 260px;
+    }
+
+    .scenery-carousel__track {
+        gap: 6px;
+        padding: 0 6px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .scenery-carousel__slide {
+        flex: 0 0 28vw;
+        height: 300px;
+    }
+
+    .scenery-carousel__track {
+        gap: 8px;
+        padding: 0 8px;
+    }
 }
 
 /* Instagram Feed */
@@ -1496,14 +1664,14 @@ section {
     }
     
     .hero__title {
-        font-size: 6rem;
+        font-size: 4.5rem;
         font-weight: 400;
     }
-    
+
     .hero__subtitle {
         font-size: var(--font-size-2xl);
     }
-    
+
     .gallery__masonry {
         column-count: 3;
         column-gap: 12px;
@@ -1579,10 +1747,10 @@ section {
     }
     
     .hero__title {
-        font-size: 6rem;
+        font-size: 5rem;
         font-weight: 400;
     }
-    
+
     .gallery__masonry {
         column-count: 4;
         column-gap: 16px;
