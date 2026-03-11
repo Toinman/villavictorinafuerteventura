@@ -94,13 +94,26 @@
     (function() {
         var hero = document.querySelector('.hero');
         var img = hero && hero.querySelector('.hero__image');
+        var navBtn = document.querySelector('.nav__toggle');
         if (!img) return;
         function reveal() {
             img.classList.add('is-loaded');
             hero.classList.add('is-revealed');
+            if (navBtn) navBtn.classList.add('is-visible');
         }
         if (img.complete && img.naturalWidth) { reveal(); }
         else { img.addEventListener('load', reveal, { once: true }); }
+
+        // Toggle nav style when scrolled past hero
+        var threshold = hero.offsetHeight * 0.7;
+        var scrolled = false;
+        window.addEventListener('scroll', function() {
+            var past = window.scrollY > threshold;
+            if (past !== scrolled) {
+                scrolled = past;
+                if (navBtn) navBtn.classList.toggle('nav--scrolled', past);
+            }
+        }, { passive: true });
     })();
     </script>
 
