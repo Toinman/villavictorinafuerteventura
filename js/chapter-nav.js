@@ -2,6 +2,10 @@
  * Chapter Navigation Rail
  * Dynamic, scroll-tracking chapter navigator for the history page.
  * Self-contained: injects its own CSS and DOM elements.
+ *
+ * Desktop (≥1100px): full sidebar with all titles visible, article shifts right.
+ * Tablet  (768–1099px): compact overlay — numerals + active title.
+ * Mobile  (<768px): thin progress strip with expand toggle.
  */
 (function() {
     'use strict';
@@ -36,20 +40,37 @@
     /* ── 2. INJECT STYLES ───────────────────────────────────── */
 
     var css = [
-        /* ── Rail container ── */
+
+        /* ============================================================
+           ARTICLE LAYOUT SHIFT — Desktop sidebar mode
+           Shift the article right so the rail has dedicated space.
+           Always applied (not conditional on rail visibility) to
+           avoid layout shift when rail fades in.
+           ============================================================ */
+        '@media (min-width: 1100px) {',
+        '  .article {',
+        '    margin-left: clamp(230px, 18vw, 400px);',
+        '    margin-right: auto;',
+        '  }',
+        '}',
+
+        /* ============================================================
+           RAIL CONTAINER — Desktop (base styles, ≥ 1100px)
+           ============================================================ */
         '.chapter-rail {',
         '  position: fixed;',
         '  left: 0;',
         '  top: 50%;',
         '  transform: translateY(-50%);',
         '  z-index: 9998;',
-        '  padding: 10px 0;',
-        '  background: rgba(249, 246, 242, 0.78);',
+        '  width: 210px;',
+        '  padding: 16px 0;',
+        '  background: rgba(249, 246, 242, 0.82);',
         '  backdrop-filter: blur(24px) saturate(1.6);',
         '  -webkit-backdrop-filter: blur(24px) saturate(1.6);',
         '  border-right: 1px solid rgba(0, 0, 0, 0.06);',
-        '  border-radius: 0 12px 12px 0;',
-        '  box-shadow: 2px 0 24px rgba(0, 0, 0, 0.04);',
+        '  border-radius: 0 16px 16px 0;',
+        '  box-shadow: 2px 0 28px rgba(0, 0, 0, 0.05);',
         '  opacity: 0;',
         '  transition: opacity 0.4s ease-out;',
         '  pointer-events: none;',
@@ -66,7 +87,7 @@
         '  margin: 0;',
         '  display: flex;',
         '  flex-direction: column;',
-        '  gap: 1px;',
+        '  gap: 2px;',
         '}',
 
         /* ── Button (each chapter) ── */
@@ -74,16 +95,15 @@
         '  position: relative;',
         '  display: flex;',
         '  align-items: center;',
-        '  gap: 8px;',
-        '  padding: 5px 14px 5px 10px;',
+        '  gap: 10px;',
+        '  padding: 8px 18px 8px 16px;',
         '  border: none;',
         '  background: transparent;',
         '  cursor: pointer;',
         '  font-family: "Cormorant Garamond", Georgia, serif;',
-        '  transition: background 150ms ease-in-out;',
+        '  transition: background 150ms ease;',
         '  width: 100%;',
         '  text-align: left;',
-        '  white-space: nowrap;',
         '  overflow: hidden;',
         '}',
         '.chapter-rail__btn:hover {',
@@ -105,28 +125,31 @@
 
         /* ── Numeral ── */
         '.chapter-rail__numeral {',
-        '  font-size: 11px;',
+        '  font-size: 14px;',
         '  font-weight: 600;',
         '  color: #8B6F47;',
-        '  min-width: 22px;',
+        '  min-width: 30px;',
         '  text-align: center;',
-        '  letter-spacing: 0.04em;',
+        '  letter-spacing: 0.03em;',
         '  position: relative;',
         '  z-index: 1;',
-        '  transition: color 200ms ease-in-out;',
+        '  flex-shrink: 0;',
+        '  transition: color 200ms ease;',
         '}',
 
-        /* ── Title ── */
+        /* ── Title (desktop: always visible) ── */
         '.chapter-rail__title {',
-        '  font-size: 11.5px;',
+        '  font-size: 12.5px;',
         '  font-weight: 400;',
-        '  color: #4A4A4A;',
-        '  max-width: 0;',
+        '  color: #999;',
+        '  white-space: nowrap;',
         '  overflow: hidden;',
-        '  opacity: 0;',
-        '  transition: max-width 0.3s ease-in-out, opacity 0.2s ease-in-out;',
+        '  text-overflow: ellipsis;',
+        '  min-width: 0;',
+        '  flex: 1;',
         '  position: relative;',
         '  z-index: 1;',
+        '  transition: color 200ms ease;',
         '}',
 
         /* ── Active chapter ── */
@@ -135,43 +158,78 @@
         '  font-weight: 700;',
         '}',
         '.chapter-rail__item.is-active .chapter-rail__title {',
-        '  max-width: 180px;',
-        '  opacity: 1;',
+        '  color: #4A4A4A;',
+        '  font-weight: 500;',
         '}',
         '.chapter-rail__item.is-active .chapter-rail__progress {',
-        '  background: rgba(139, 111, 71, 0.16);',
+        '  background: rgba(139, 111, 71, 0.18);',
         '}',
 
-        /* ── Hover: expand title ── */
+        /* ── Hover: brighten title ── */
         '.chapter-rail__btn:hover .chapter-rail__title,',
         '.chapter-rail__btn:focus-visible .chapter-rail__title {',
-        '  max-width: 180px;',
-        '  opacity: 1;',
+        '  color: #5A5A5A;',
         '}',
 
-        /* ── Completed chapters ── */
+        /* ── Past (completed) chapters ── */
         '.chapter-rail__item.is-past .chapter-rail__numeral {',
-        '  color: #A0826D;',
+        '  color: #B0926F;',
+        '}',
+        '.chapter-rail__item.is-past .chapter-rail__title {',
+        '  color: #B5B5B5;',
         '}',
 
-        /* ── Hide when menu is open ── */
+        /* ── Hide when nav menu is open ── */
         'body.nav-open .chapter-rail {',
         '  opacity: 0 !important;',
         '  pointer-events: none !important;',
         '}',
 
-        /* ── Mobile toggle button ── */
+        /* ── Mobile toggle (hidden on desktop) ── */
         '.chapter-rail__mobile-toggle {',
         '  display: none;',
         '}',
 
-        /* ── Tablet: slightly tighter ── */
-        '@media (max-width: 1023px) {',
-        '  .chapter-rail { padding: 8px 0; }',
-        '  .chapter-rail__btn { padding: 4px 12px 4px 8px; gap: 6px; }',
+        /* ============================================================
+           TABLET — 768 – 1099 px
+           Compact overlay: numerals always, title only for active/hover.
+           No article shift — rail floats over the left margin.
+           ============================================================ */
+        '@media (max-width: 1099px) {',
+        '  .chapter-rail {',
+        '    width: auto;',
+        '    padding: 10px 0;',
+        '    border-radius: 0 12px 12px 0;',
+        '  }',
+        '  .chapter-rail__btn {',
+        '    padding: 5px 14px 5px 10px;',
+        '    gap: 8px;',
+        '  }',
+        '  .chapter-rail__numeral {',
+        '    font-size: 12px;',
+        '    min-width: 24px;',
+        '  }',
+        '  .chapter-rail__title {',
+        '    max-width: 0;',
+        '    opacity: 0;',
+        '    flex: 0 0 auto;',
+        '    transition: max-width 0.3s ease, opacity 0.2s ease, color 0.2s ease;',
+        '  }',
+        '  .chapter-rail__item.is-active .chapter-rail__title {',
+        '    max-width: 180px;',
+        '    opacity: 1;',
+        '  }',
+        '  .chapter-rail__btn:hover .chapter-rail__title,',
+        '  .chapter-rail__btn:focus-visible .chapter-rail__title {',
+        '    max-width: 180px;',
+        '    opacity: 1;',
+        '  }',
         '}',
 
-        /* ── Mobile: thin progress strip ── */
+        /* ============================================================
+           MOBILE — < 768 px
+           Thin progress strip with expand-toggle.
+           ============================================================ */
         '@media (max-width: 767px) {',
         '  .chapter-rail {',
         '    top: auto;',
@@ -212,7 +270,7 @@
         '    opacity: 0.85;',
         '  }',
 
-        /* ── Mobile toggle visible ── */
+        /* Mobile toggle visible */
         '  .chapter-rail__mobile-toggle {',
         '    display: flex;',
         '    align-items: center;',
@@ -242,7 +300,7 @@
         '    height: 16px;',
         '  }',
 
-        /* ── Mobile expanded ── */
+        /* Mobile expanded */
         '  .chapter-rail.is-expanded {',
         '    width: auto;',
         '    background: rgba(249, 246, 242, 0.92);',
@@ -280,7 +338,9 @@
         '  }',
         '}',
 
-        /* ── Reduced motion ── */
+        /* ============================================================
+           ACCESSIBILITY
+           ============================================================ */
         '@media (prefers-reduced-motion: reduce) {',
         '  .chapter-rail,',
         '  .chapter-rail__progress,',
@@ -290,8 +350,6 @@
         '    transition-duration: 0.01ms !important;',
         '  }',
         '}',
-
-        /* ── Print ── */
         '@media print {',
         '  .chapter-rail { display: none !important; }',
         '}'
