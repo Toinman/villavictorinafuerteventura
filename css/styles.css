@@ -2482,6 +2482,8 @@ body:has(.lightbox--active) .nav__toggle {
 
 .article__image {
     width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     border-radius: var(--radius-md);
     margin: var(--spacing-md) 0;
 }
