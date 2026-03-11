@@ -11,6 +11,9 @@
     <meta name="description" content="Elegant private villa in El Roque with 3 bedrooms, 3 bathrooms and heated outdoor pool. Near El Cotillo — pristine beaches, untouched nature, no crowds.">
     <meta name="keywords" content="private villa El Roque, villa heated pool Fuerteventura, luxury vacation home Canary Islands, El Roque villa rental, Fuerteventura private house">
     
+    <!-- Google Search Console verification (replace YOUR_VERIFICATION_CODE with actual code) -->
+    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE"> -->
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://villavictorinafuerteventura.com/">
     
@@ -97,6 +100,121 @@
         
         .skip-link:focus {
             top: 0;
+        }
+
+        /* Hero loading: dark base → image fade-in → content fade-in */
+        .hero,
+        .hero--page,
+        .explore-hero {
+            background-color: #1a1a2e;
+        }
+
+        .hero__image {
+            opacity: 0;
+            transition: opacity 0.6s ease-out;
+        }
+
+        .hero__image.is-loaded {
+            opacity: 1;
+        }
+
+        .hero__content {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.5s ease-out 0.15s, transform 0.5s ease-out 0.15s;
+        }
+
+        .hero__features {
+            opacity: 0;
+            transform: translateX(-50%) translateY(12px);
+            transition: opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s;
+        }
+
+        .hero.is-revealed .hero__content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero.is-revealed .hero__features {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Nav toggle – critical inline to prevent square-icon flash */
+        .nav__toggle {
+            position: fixed;
+            top: var(--spacing-sm);
+            right: var(--spacing-sm);
+            z-index: 10005;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px) saturate(1.8);
+            -webkit-backdrop-filter: blur(20px) saturate(1.8);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15),
+                        inset 0 0.5px 0 rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            transition: opacity 0.4s ease-out 0.25s, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav__toggle.is-visible,
+        .nav__toggle[aria-expanded="true"] {
+            opacity: 1;
+        }
+        .nav__toggle.nav--scrolled {
+            background: rgba(0, 0, 0, 0.06);
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+        .nav__toggle.nav--scrolled .nav__toggle-bar {
+            background: #3A3A3A;
+        }
+        .nav__toggle-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: background 0.3s ease;
+        }
+
+        /* Nav overlay – hidden by default to prevent flash of links */
+        .nav__overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Hero CTA button – glass style to prevent purple flash */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .btn--outline {
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(24px) saturate(1.6);
+            -webkit-backdrop-filter: blur(24px) saturate(1.6);
+            color: var(--color-white);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2),
+                        inset 0 0.5px 0 rgba(255, 255, 255, 0.15);
+            padding: 0.85rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 80px;
+            letter-spacing: 0.02em;
         }
     </style>
     
@@ -189,6 +307,116 @@
         "priceRange": "€€€"
     }
     </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://villavictorinafuerteventura.com/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Villa Victorina El Roque",
+        "url": "https://villavictorinafuerteventura.com/",
+        "logo": "https://villavictorinafuerteventura.com/favicon.svg",
+        "image": "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg",
+        "description": "Elegant private villa in El Roque with 3 bedrooms, 3 bathrooms and heated outdoor pool. Near El Cotillo, Fuerteventura.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "El Roque",
+            "addressRegion": "Fuerteventura, Canary Islands",
+            "addressCountry": "ES"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.68574212663537",
+            "longitude": "-13.990865409927036"
+        },
+        "telephone": "+32477486326",
+        "email": "mc_vancauteren@hotmail.com",
+        "sameAs": [
+            "https://www.instagram.com/villa_victorina"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+32477486326",
+            "email": "mc_vancauteren@hotmail.com",
+            "contactType": "reservations",
+            "availableLanguage": ["English", "Dutch"]
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many guests can Villa Victorina accommodate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Villa Victorina can comfortably accommodate up to 6 guests across 3 spacious bedrooms, each with its own ensuite bathroom."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Villa Victorina have a heated pool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Villa Victorina features a private heated outdoor swimming pool, available year-round for guests to enjoy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How far is Villa Victorina from the nearest beach?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Villa Victorina is located just 2.2 km from Playa del Castillo beach. The charming beaches and lagoons of El Cotillo are also just minutes away by car."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How far is Villa Victorina from Fuerteventura Airport?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Villa Victorina is approximately 42 km from Fuerteventura Airport (FUE), roughly a 35-minute drive."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What amenities are included at Villa Victorina?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The villa includes a heated outdoor pool, WiFi, air conditioning, a fully equipped modern kitchen with dishwasher, washing machine, private parking, and a spacious terrace with outdoor seating."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are pets allowed at Villa Victorina?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, pets are not allowed at Villa Victorina. The property is also non-smoking."
+                }
+            }
+        ]
+    }
+    </script>
     
     <!-- Google Analytics - Placeholder (uncomment when ready) -->
     <!--
@@ -234,6 +462,7 @@
                 <li><a href="/" class="nav__link nav__link--active">Home</a></li>
                 <li><a href="/explore-fuerteventura.html" class="nav__link">Explore Fuerteventura</a></li>
                 <li><a href="/fuerteventura-history.html" class="nav__link">Fuerteventura History</a></li>
+                <li><a href="/contact.html" class="nav__link">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -280,10 +509,59 @@
             </div>
         </div>
     </header>
-    
+
+    <!-- Hero fade-in trigger -->
+    <script>
+    (function() {
+        var hero = document.querySelector('.hero');
+        var img = hero && hero.querySelector('.hero__image');
+        var navBtn = document.querySelector('.nav__toggle');
+        if (!img) return;
+        function reveal() {
+            img.classList.add('is-loaded');
+            hero.classList.add('is-revealed');
+            if (navBtn) navBtn.classList.add('is-visible');
+        }
+        if (img.complete && img.naturalWidth) { reveal(); }
+        else { img.addEventListener('load', reveal, { once: true }); }
+
+        // Toggle nav style when scrolled past hero
+        var threshold = hero.offsetHeight * 0.7;
+        var scrolled = false;
+        window.addEventListener('scroll', function() {
+            var past = window.scrollY > threshold;
+            if (past !== scrolled) {
+                scrolled = past;
+                navBtn.classList.toggle('nav--scrolled', past);
+            }
+        }, { passive: true });
+    })();
+    </script>
+
     <!-- Main Content -->
     <main id="main-content">
         
+        <!-- Guest Review -->
+        <section class="review" aria-label="Guest review">
+            <div class="container">
+                <div class="review__card">
+                    <div class="review__stars" aria-label="5 out of 5 stars">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                    </div>
+                    <h3 class="review__title">Summer dreaming</h3>
+                    <div class="review__body">
+                        <p class="review__text">"My friend and I stayed at the gorgeous villa for 9 days this August and we absolutely fell in love. We are both 2 working single mamas from London with kiddos and the stay at the villa was exactly what our little families needed. The villa is spacious, light, has all amenities 2 mama's need to keep on top of their children. The pool is stunning, heated and endless entertainment for the kids. The views over El Roque and the gorgeous landscape from Fuerteventura is infinite from the villa, the villa and its location is a little slice of heaven. Cotillo beaches are a 6 minutes drive... I can only recommend this beautiful home to anyone! Big love to the owners! You did an amazing job!!"</p>
+                    </div>
+                    <button class="review__toggle" aria-expanded="false">Read more</button>
+                    <p class="review__author">Sofie Geradin</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Top 10 Photo Gallery Section -->
         <section id="gallery" class="gallery gallery--top" aria-labelledby="gallery-heading">
             <div class="container">
@@ -292,7 +570,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Description Section -->
         <section id="description" class="description" aria-labelledby="description-heading">
             <div class="container">
@@ -345,22 +623,22 @@
                 <div class="scenery-carousel">
                     <div class="scenery-carousel__track">
                         <div class="scenery-carousel__slide">
-                            <img src="images/Scenery/Villa El Roque - Noogar Design -3.jpg" alt="Villa Victorina with pool and Fuerteventura mountain landscape" class="scenery-carousel__image" loading="lazy">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -3.jpg" alt="Villa Victorina with pool and Fuerteventura mountain landscape" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
                         </div>
                         <div class="scenery-carousel__slide">
-                            <img src="images/Scenery/Villa El Roque - Noogar Design -6.jpg" alt="Villa Victorina surrounded by the volcanic desert landscape of Fuerteventura" class="scenery-carousel__image" loading="lazy">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -6.jpg" alt="Villa Victorina surrounded by the volcanic desert landscape of Fuerteventura" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
                         </div>
                         <div class="scenery-carousel__slide">
-                            <img src="images/Scenery/Villa El Roque - Noogar Design -15.jpg" alt="View from the terrace across the pool towards El Roque village and mountains" class="scenery-carousel__image" loading="lazy">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -15.jpg" alt="View from the terrace across the pool towards El Roque village and mountains" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
                         </div>
                         <div class="scenery-carousel__slide">
-                            <img src="images/Scenery/Villa El Roque - Noogar Design -17.jpg" alt="Indoor-outdoor living with views through sliding doors to pool and landscape" class="scenery-carousel__image" loading="lazy">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -17.jpg" alt="Indoor-outdoor living with views through sliding doors to pool and landscape" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
                         </div>
                         <div class="scenery-carousel__slide">
-                            <img src="images/Scenery/Villa El Roque - Noogar Design -64.jpg" alt="Pool terrace with villa architecture and mountain backdrop" class="scenery-carousel__image" loading="lazy">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -64.jpg" alt="Pool terrace with villa architecture and mountain backdrop" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
                         </div>
                         <div class="scenery-carousel__slide">
-                            <img src="images/Scenery/Villa El Roque - Noogar Design -62.jpg" alt="Covered terrace with lounge furniture overlooking pool and landscape" class="scenery-carousel__image" loading="lazy">
+                            <img src="images/Scenery/Villa El Roque - Noogar Design -62.jpg" alt="Covered terrace with lounge furniture overlooking pool and landscape" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
                         </div>
                     </div>
                 </div>
@@ -389,22 +667,22 @@
                 <div class="interior-carousel">
                     <div class="interior-carousel__track">
                         <div class="interior-carousel__slide">
-                            <img src="images/Villa El Roque - Noogar Design -35.jpg" alt="Bedroom with wooden bed frame, mountain views through floor-to-ceiling glass doors" class="interior-carousel__image" loading="lazy">
+                            <img src="images/Villa El Roque - Noogar Design -35.jpg" alt="Bedroom with wooden bed frame, mountain views through floor-to-ceiling glass doors" class="interior-carousel__image" loading="lazy" width="2048" height="1365">
                         </div>
                         <div class="interior-carousel__slide">
-                            <img src="images/Villa El Roque - Noogar Design -45.jpg" alt="Ensuite bathroom with double stone basin vanity, oval mirrors and copper fixtures" class="interior-carousel__image" loading="lazy">
+                            <img src="images/Villa El Roque - Noogar Design -45.jpg" alt="Ensuite bathroom with double stone basin vanity, oval mirrors and copper fixtures" class="interior-carousel__image" loading="lazy" width="1463" height="2048">
                         </div>
                         <div class="interior-carousel__slide">
-                            <img src="images/Villa El Roque - Noogar Design -101.jpg" alt="Open-plan living room with white sofa, oak coffee table and modern kitchen" class="interior-carousel__image" loading="lazy">
+                            <img src="images/Villa El Roque - Noogar Design -101.jpg" alt="Open-plan living room with white sofa, oak coffee table and modern kitchen" class="interior-carousel__image" loading="lazy" width="2048" height="1365">
                         </div>
                         <div class="interior-carousel__slide">
-                            <img src="images/Villa El Roque - Noogar Design -105.jpg" alt="Living and dining area viewed through open sliding doors with wooden beam ceiling" class="interior-carousel__image" loading="lazy">
+                            <img src="images/Villa El Roque - Noogar Design -105.jpg" alt="Living and dining area viewed through open sliding doors with wooden beam ceiling" class="interior-carousel__image" loading="lazy" width="2048" height="1365">
                         </div>
                         <div class="interior-carousel__slide">
-                            <img src="images/Villa El Roque - Noogar Design -43.jpg" alt="Bathroom with stone basin, copper rain shower and glass door to private patio" class="interior-carousel__image" loading="lazy">
+                            <img src="images/Villa El Roque - Noogar Design -43.jpg" alt="Bathroom with stone basin, copper rain shower and glass door to private patio" class="interior-carousel__image" loading="lazy" width="2048" height="1365">
                         </div>
                         <div class="interior-carousel__slide">
-                            <img src="images/Villa El Roque - Noogar Design -26.jpg" alt="Bathroom with white basin, round mirror, wooden pendant light and walk-in shower with garden view" class="interior-carousel__image" loading="lazy">
+                            <img src="images/Villa El Roque - Noogar Design -26.jpg" alt="Bathroom with white basin, round mirror, wooden pendant light and walk-in shower with garden view" class="interior-carousel__image" loading="lazy" width="1365" height="2048">
                         </div>
                     </div>
                 </div>
@@ -462,104 +740,66 @@
 
                 <div class="features">
                     <h3 class="features__title">Amenities & Features</h3>
-                    <div class="features__grid">
-                        <!-- Feature 1 - Swimming Pool Icon from Phosphor Icons -->
+                    <div class="features__list">
+                        <!-- 1. Heated Pool -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M88,147.39a6,6,0,0,0,6-6V126h68v17.29a6,6,0,0,0,12,0V32a6,6,0,0,0-12,0V50H94V32a6,6,0,0,0-12,0V141.39A6,6,0,0,0,88,147.39ZM94,114V94h68v20Zm68-52V82H94V62ZM26,168a6,6,0,0,1,6-6c13.82,0,21,4.79,27.33,9,5.63,3.75,10.48,7,20.67,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.32-9s21,4.79,27.33,9c5.63,3.75,10.49,7,20.68,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.33-9a6,6,0,0,1,0,12c-10.18,0-15,3.24-20.67,7-6.34,4.22-13.52,9-27.33,9s-21-4.79-27.33-9c-5.63-3.75-10.49-7-20.68-7s-15,3.24-20.67,7c-6.33,4.22-13.51,9-27.32,9s-21-4.79-27.33-9C47,177.24,42.18,174,32,174A6,6,0,0,1,26,168Zm204,40a6,6,0,0,1-6,6c-10.18,0-15,3.24-20.67,7-6.34,4.22-13.52,9-27.33,9s-21-4.79-27.33-9c-5.63-3.75-10.49-7-20.68-7s-15,3.24-20.67,7c-6.33,4.22-13.51,9-27.32,9s-21-4.79-27.33-9C47,217.24,42.18,214,32,214a6,6,0,0,1,0-12c13.82,0,21,4.79,27.33,9,5.63,3.75,10.48,7,20.67,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.32-9s21,4.79,27.33,9c5.63,3.75,10.49,7,20.68,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.33-9A6,6,0,0,1,230,208Z"/>
-                            </svg>
-                            <h4 class="feature__title">Heated Outdoor Pool</h4>
-                            <p class="feature__description">Private outdoor heated swimming pool</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M88,147.39a6,6,0,0,0,6-6V126h68v17.29a6,6,0,0,0,12,0V32a6,6,0,0,0-12,0V50H94V32a6,6,0,0,0-12,0V141.39A6,6,0,0,0,88,147.39ZM94,114V94h68v20Zm68-52V82H94V62ZM26,168a6,6,0,0,1,6-6c13.82,0,21,4.79,27.33,9,5.63,3.75,10.48,7,20.67,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.32-9s21,4.79,27.33,9c5.63,3.75,10.49,7,20.68,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.33-9a6,6,0,0,1,0,12c-10.18,0-15,3.24-20.67,7-6.34,4.22-13.52,9-27.33,9s-21-4.79-27.33-9c-5.63-3.75-10.49-7-20.68-7s-15,3.24-20.67,7c-6.33,4.22-13.51,9-27.32,9s-21-4.79-27.33-9C47,177.24,42.18,174,32,174A6,6,0,0,1,26,168Zm204,40a6,6,0,0,1-6,6c-10.18,0-15,3.24-20.67,7-6.34,4.22-13.52,9-27.33,9s-21-4.79-27.33-9c-5.63-3.75-10.49-7-20.68-7s-15,3.24-20.67,7c-6.33,4.22-13.51,9-27.32,9s-21-4.79-27.33-9C47,217.24,42.18,214,32,214a6,6,0,0,1,0-12c13.82,0,21,4.79,27.33,9,5.63,3.75,10.48,7,20.67,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.32-9s21,4.79,27.33,9c5.63,3.75,10.49,7,20.68,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.33-9A6,6,0,0,1,230,208Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Heated Outdoor Pool</h4><p class="feature__description">Private heated pool, open year-round</p></div>
                         </article>
-                        
-                        <!-- Feature 2 - Bed Icon from Phosphor Icons -->
+                        <!-- 2. Bedrooms -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M216,74H30V48a6,6,0,0,0-12,0V208a6,6,0,0,0,12,0V174H242v34a6,6,0,0,0,12,0V112A38,38,0,0,0,216,74ZM30,86h76v76H30Zm88,76V86h98a26,26,0,0,1,26,26v50Z"/>
-                            </svg>
-                            <h4 class="feature__title">3 Bedrooms</h4>
-                            <p class="feature__description">Spacious bedrooms with premium linens for a comfortable stay</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M216,74H30V48a6,6,0,0,0-12,0V208a6,6,0,0,0,12,0V174H242v34a6,6,0,0,0,12,0V112A38,38,0,0,0,216,74ZM30,86h76v76H30Zm88,76V86h98a26,26,0,0,1,26,26v50Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">3 Bedrooms</h4><p class="feature__description">Spacious rooms with premium linens</p></div>
                         </article>
-                        
-                        <!-- Feature 2b - Shower Icon from Phosphor Icons -->
+                        <!-- 3. Bathrooms -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M62,236a10,10,0,1,1-10-10A10,10,0,0,1,62,236Zm22-42a10,10,0,1,0,10,10A10,10,0,0,0,84,194Zm-64,0a10,10,0,1,0,10,10A10,10,0,0,0,20,194Zm32-32a10,10,0,1,0,10,10A10,10,0,0,0,52,162ZM254,40a6,6,0,0,1-6,6H218.49l-28.9,28.89L167.83,202.32a14,14,0,0,1-23.71,7.57l-98-98a14,14,0,0,1,7.6-23.71l127.4-21.76,30.65-30.65A6,6,0,0,1,216,34h32A6,6,0,0,1,254,40ZM176.66,79.34,55.7,100a2,2,0,0,0-1.11,3.39l98,98a2,2,0,0,0,3.39-1.09Z"/>
-                            </svg>
-                            <h4 class="feature__title">3 Bathrooms</h4>
-                            <p class="feature__description">Each bedroom has its own ensuite with shower, washbasin and toilet</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M62,236a10,10,0,1,1-10-10A10,10,0,0,1,62,236Zm22-42a10,10,0,1,0,10,10A10,10,0,0,0,84,194Zm-64,0a10,10,0,1,0,10,10A10,10,0,0,0,20,194Zm32-32a10,10,0,1,0,10,10A10,10,0,0,0,52,162ZM254,40a6,6,0,0,1-6,6H218.49l-28.9,28.89L167.83,202.32a14,14,0,0,1-23.71,7.57l-98-98a14,14,0,0,1,7.6-23.71l127.4-21.76,30.65-30.65A6,6,0,0,1,216,34h32A6,6,0,0,1,254,40ZM176.66,79.34,55.7,100a2,2,0,0,0-1.11,3.39l98,98a2,2,0,0,0,3.39-1.09Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">3 Ensuite Bathrooms</h4><p class="feature__description">Private shower, washbasin and toilet per bedroom</p></div>
                         </article>
-                        
-                        <!-- Feature 2c - Users Three Icon from Phosphor Icons -->
+                        <!-- 4. Guests -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M243.6,148.8a6,6,0,0,1-8.4-1.2A53.58,53.58,0,0,0,192,126a6,6,0,0,1,0-12,26,26,0,1,0-25.18-32.5,6,6,0,0,1-11.62-3,38,38,0,1,1,59.91,39.63A65.69,65.69,0,0,1,244.8,140.4,6,6,0,0,1,243.6,148.8ZM189.19,213a6,6,0,0,1-2.19,8.2,5.9,5.9,0,0,1-3,.81,6,6,0,0,1-5.2-3,59,59,0,0,0-101.62,0,6,6,0,1,1-10.38-6A70.1,70.1,0,0,1,103,182.55a46,46,0,1,1,50.1,0A70.1,70.1,0,0,1,189.19,213ZM128,178a34,34,0,1,0-34-34A34,34,0,0,0,128,178ZM70,120a6,6,0,0,0-6-6A26,26,0,1,1,89.18,81.49a6,6,0,1,0,11.62-3,38,38,0,1,0-59.91,39.63A65.69,65.69,0,0,0,11.2,140.4a6,6,0,1,0,9.6,7.2A53.58,53.58,0,0,1,64,126,6,6,0,0,0,70,120Z"/>
-                            </svg>
-                            <h4 class="feature__title">Up to 6 Guests</h4>
-                            <p class="feature__description">Perfect for families or groups up to 6 people</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M243.6,148.8a6,6,0,0,1-8.4-1.2A53.58,53.58,0,0,0,192,126a6,6,0,0,1,0-12,26,26,0,1,0-25.18-32.5,6,6,0,0,1-11.62-3,38,38,0,1,1,59.91,39.63A65.69,65.69,0,0,1,244.8,140.4,6,6,0,0,1,243.6,148.8ZM189.19,213a6,6,0,0,1-2.19,8.2,5.9,5.9,0,0,1-3,.81,6,6,0,0,1-5.2-3,59,59,0,0,0-101.62,0,6,6,0,1,1-10.38-6A70.1,70.1,0,0,1,103,182.55a46,46,0,1,1,50.1,0A70.1,70.1,0,0,1,189.19,213ZM128,178a34,34,0,1,0-34-34A34,34,0,0,0,128,178ZM70,120a6,6,0,0,0-6-6A26,26,0,1,1,89.18,81.49a6,6,0,1,0,11.62-3,38,38,0,1,0-59.91,39.63A65.69,65.69,0,0,0,11.2,140.4a6,6,0,1,0,9.6,7.2A53.58,53.58,0,0,1,64,126,6,6,0,0,0,70,120Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Up to 6 Guests</h4><p class="feature__description">Ideal for families or groups</p></div>
                         </article>
-                        
-                        <!-- Feature 3 - Cooking Pot Icon from Phosphor Icons -->
+                        <!-- 5. Kitchen -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M90,48V16a6,6,0,0,1,12,0V48a6,6,0,0,1-12,0Zm38,6a6,6,0,0,0,6-6V16a6,6,0,0,0-12,0V48A6,6,0,0,0,128,54Zm32,0a6,6,0,0,0,6-6V16a6,6,0,0,0-12,0V48A6,6,0,0,0,160,54Zm91.6,46.8L222,123v61a30,30,0,0,1-30,30H64a30,30,0,0,1-30-30V123L4.4,100.8a6,6,0,0,1,7.2-9.6L34,108V80a6,6,0,0,1,6-6H216a6,6,0,0,1,6,6v28l22.4-16.8a6,6,0,0,1,7.2,9.6ZM210,86H46v98a18,18,0,0,0,18,18H192a18,18,0,0,0,18-18Z"/>
-                            </svg>
-                            <h4 class="feature__title">Fully Equipped Kitchen</h4>
-                            <p class="feature__description">Modern kitchen with dishwasher, microwave, oven, refrigerator and all cookware</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M90,48V16a6,6,0,0,1,12,0V48a6,6,0,0,1-12,0Zm38,6a6,6,0,0,0,6-6V16a6,6,0,0,0-12,0V48A6,6,0,0,0,128,54Zm32,0a6,6,0,0,0,6-6V16a6,6,0,0,0-12,0V48A6,6,0,0,0,160,54Zm91.6,46.8L222,123v61a30,30,0,0,1-30,30H64a30,30,0,0,1-30-30V123L4.4,100.8a6,6,0,0,1,7.2-9.6L34,108V80a6,6,0,0,1,6-6H216a6,6,0,0,1,6,6v28l22.4-16.8a6,6,0,0,1,7.2,9.6ZM210,86H46v98a18,18,0,0,0,18,18H192a18,18,0,0,0,18-18Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Fully Equipped Kitchen</h4><p class="feature__description">Dishwasher, oven, microwave and all cookware</p></div>
                         </article>
-                        
-                        <!-- Feature 4 - Wifi High Icon from Phosphor Icons -->
+                        <!-- 6. WiFi -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M138,204a10,10,0,1,1-10-10A10,10,0,0,1,138,204ZM235.81,88.55a170,170,0,0,0-215.62,0,6,6,0,1,0,7.62,9.27,158,158,0,0,1,200.38,0,6,6,0,1,0,7.62-9.27Zm-32.08,35.79a122,122,0,0,0-151.46,0,6,6,0,0,0,7.46,9.41,110,110,0,0,1,136.54,0A6,6,0,0,0,200,135a6,6,0,0,0,3.73-10.7Zm-32.2,35.81a74,74,0,0,0-87.06,0,6,6,0,0,0,7.06,9.7,62,62,0,0,1,72.94,0,6,6,0,0,0,8.38-1.32A6,6,0,0,0,171.53,160.15Z"/>
-                            </svg>
-                            <h4 class="feature__title">WiFi</h4>
-                            <p class="feature__description">Complimentary high-speed WiFi throughout the entire villa</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M138,204a10,10,0,1,1-10-10A10,10,0,0,1,138,204ZM235.81,88.55a170,170,0,0,0-215.62,0,6,6,0,1,0,7.62,9.27,158,158,0,0,1,200.38,0,6,6,0,1,0,7.62-9.27Zm-32.08,35.79a122,122,0,0,0-151.46,0,6,6,0,0,0,7.46,9.41,110,110,0,0,1,136.54,0A6,6,0,0,0,200,135a6,6,0,0,0,3.73-10.7Zm-32.2,35.81a74,74,0,0,0-87.06,0,6,6,0,0,0,7.06,9.7,62,62,0,0,1,72.94,0,6,6,0,0,0,8.38-1.32A6,6,0,0,0,171.53,160.15Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">High-Speed WiFi</h4><p class="feature__description">Fast internet throughout the villa</p></div>
                         </article>
-                        
-                        <!-- Feature 5 - Snowflake Icon from Phosphor Icons -->
+                        <!-- 7. Air Conditioning -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M221.83,150.57a6,6,0,0,1-4.4,7.26l-26.62,6.54,7,26.08a6,6,0,0,1-4.24,7.35,6.4,6.4,0,0,1-1.55.2,6,6,0,0,1-5.8-4.45L178.27,164,134,138.39v51.13l22.24,22.24a6,6,0,1,1-8.48,8.48L128,200.49l-19.76,19.75a6,6,0,0,1-8.48-8.48L122,189.52V138.39L77.73,164l-7.93,29.6A6,6,0,0,1,64,198a6.4,6.4,0,0,1-1.55-.2,6,6,0,0,1-4.24-7.35l7-26.08-26.62-6.54a6,6,0,0,1,2.86-11.66l30.23,7.43L116,128,71.66,102.4l-30.23,7.43A5.88,5.88,0,0,1,40,110a6,6,0,0,1-1.43-11.83l26.62-6.54-7-26.08a6,6,0,1,1,11.59-3.1l7.93,29.6L122,117.61V66.48L99.76,44.24a6,6,0,0,1,8.48-8.48L128,55.51l19.76-19.75a6,6,0,0,1,8.48,8.48L134,66.48v51.13l44.27-25.56,7.93-29.6a6,6,0,1,1,11.59,3.1l-7,26.08,26.62,6.54A6,6,0,0,1,216,110a5.88,5.88,0,0,1-1.43-.17l-30.23-7.43L140,128l44.34,25.6,30.23-7.43A6,6,0,0,1,221.83,150.57Z"/>
-                            </svg>
-                            <h4 class="feature__title">Air Conditioning</h4>
-                            <p class="feature__description">Climate control in all rooms for optimal comfort during your stay</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M221.83,150.57a6,6,0,0,1-4.4,7.26l-26.62,6.54,7,26.08a6,6,0,0,1-4.24,7.35,6.4,6.4,0,0,1-1.55.2,6,6,0,0,1-5.8-4.45L178.27,164,134,138.39v51.13l22.24,22.24a6,6,0,1,1-8.48,8.48L128,200.49l-19.76,19.75a6,6,0,0,1-8.48-8.48L122,189.52V138.39L77.73,164l-7.93,29.6A6,6,0,0,1,64,198a6.4,6.4,0,0,1-1.55-.2,6,6,0,0,1-4.24-7.35l7-26.08-26.62-6.54a6,6,0,0,1,2.86-11.66l30.23,7.43L116,128,71.66,102.4l-30.23,7.43A5.88,5.88,0,0,1,40,110a6,6,0,0,1-1.43-11.83l26.62-6.54-7-26.08a6,6,0,1,1,11.59-3.1l7.93,29.6L122,117.61V66.48L99.76,44.24a6,6,0,0,1,8.48-8.48L128,55.51l19.76-19.75a6,6,0,0,1,8.48,8.48L134,66.48v51.13l44.27-25.56,7.93-29.6a6,6,0,1,1,11.59,3.1l-7,26.08,26.62,6.54A6,6,0,0,1,216,110a5.88,5.88,0,0,1-1.43-.17l-30.23-7.43L140,128l44.34,25.6,30.23-7.43A6,6,0,0,1,221.83,150.57Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Air Conditioning</h4><p class="feature__description">Climate control in all rooms</p></div>
                         </article>
-                        
-                        <!-- Feature 6 - Sun Icon from Phosphor Icons -->
+                        <!-- 8. Terrace -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M122,40V16a6,6,0,0,1,12,0V40a6,6,0,0,1-12,0Zm68,88a62,62,0,1,1-62-62A62.07,62.07,0,0,1,190,128Zm-12,0a50,50,0,1,0-50,50A50.06,50.06,0,0,0,178,128ZM59.76,68.24a6,6,0,1,0,8.48-8.48l-16-16a6,6,0,0,0-8.48,8.48Zm0,119.52-16,16a6,6,0,1,0,8.48,8.48l16-16a6,6,0,1,0-8.48-8.48ZM192,70a6,6,0,0,0,4.24-1.76l16-16a6,6,0,0,0-8.48-8.48l-16,16A6,6,0,0,0,192,70Zm4.24,117.76a6,6,0,0,0-8.48,8.48l16,16a6,6,0,0,0,8.48-8.48ZM46,128a6,6,0,0,0-6-6H16a6,6,0,0,0,0,12H40A6,6,0,0,0,46,128Zm82,82a6,6,0,0,0-6,6v24a6,6,0,0,0,12,0V216A6,6,0,0,0,128,210Zm112-88H216a6,6,0,0,0,0,12h24a6,6,0,0,0,0-12Z"/>
-                            </svg>
-                            <h4 class="feature__title">Terrace & Outdoor Seating</h4>
-                            <p class="feature__description">Spacious terrace with outdoor furniture, perfect for relaxation</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M122,40V16a6,6,0,0,1,12,0V40a6,6,0,0,1-12,0Zm68,88a62,62,0,1,1-62-62A62.07,62.07,0,0,1,190,128Zm-12,0a50,50,0,1,0-50,50A50.06,50.06,0,0,0,178,128ZM59.76,68.24a6,6,0,1,0,8.48-8.48l-16-16a6,6,0,0,0-8.48,8.48Zm0,119.52-16,16a6,6,0,1,0,8.48,8.48l16-16a6,6,0,1,0-8.48-8.48ZM192,70a6,6,0,0,0,4.24-1.76l16-16a6,6,0,0,0-8.48-8.48l-16,16A6,6,0,0,0,192,70Zm4.24,117.76a6,6,0,0,0-8.48,8.48l16,16a6,6,0,0,0,8.48-8.48ZM46,128a6,6,0,0,0-6-6H16a6,6,0,0,0,0,12H40A6,6,0,0,0,46,128Zm82,82a6,6,0,0,0-6,6v24a6,6,0,0,0,12,0V216A6,6,0,0,0,128,210Zm112-88H216a6,6,0,0,0,0,12h24a6,6,0,0,0,0-12Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Terrace & Outdoor Seating</h4><p class="feature__description">Spacious terrace with lounge furniture</p></div>
                         </article>
-                        
-                        <!-- Feature 7 - Washing Machine Icon from Phosphor Icons -->
+                        <!-- 9. Washing Machine -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M208,34H48A14,14,0,0,0,34,48V208a14,14,0,0,0,14,14H208a14,14,0,0,0,14-14V48A14,14,0,0,0,208,34Zm2,174a2,2,0,0,1-2,2H48a2,2,0,0,1-2-2V48a2,2,0,0,1,2-2H208a2,2,0,0,1,2,2ZM128,66a62,62,0,1,0,62,62A62.07,62.07,0,0,0,128,66Zm0,112a50,50,0,1,1,50-50A50.06,50.06,0,0,1,128,178ZM198,68a10,10,0,1,1-10-10A10,10,0,0,1,198,68Zm-73.76,48.24-16,16a6,6,0,0,1-8.48-8.48l16-16a6,6,0,0,1,8.48,8.48Zm32-.48a6,6,0,0,1,0,8.48l-32,32a6,6,0,0,1-8.48-8.48l32-32A6,6,0,0,1,156.24,115.76Z"/>
-                            </svg>
-                            <h4 class="feature__title">Washing Machine</h4>
-                            <p class="feature__description">Washer available for your convenience during longer stays</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M208,34H48A14,14,0,0,0,34,48V208a14,14,0,0,0,14,14H208a14,14,0,0,0,14-14V48A14,14,0,0,0,208,34Zm2,174a2,2,0,0,1-2,2H48a2,2,0,0,1-2-2V48a2,2,0,0,1,2-2H208a2,2,0,0,1,2,2ZM128,66a62,62,0,1,0,62,62A62.07,62.07,0,0,0,128,66Zm0,112a50,50,0,1,1,50-50A50.06,50.06,0,0,1,128,178ZM198,68a10,10,0,1,1-10-10A10,10,0,0,1,198,68Zm-73.76,48.24-16,16a6,6,0,0,1-8.48-8.48l16-16a6,6,0,0,1,8.48,8.48Zm32-.48a6,6,0,0,1,0,8.48l-32,32a6,6,0,0,1-8.48-8.48l32-32A6,6,0,0,1,156.24,115.76Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Washing Machine</h4><p class="feature__description">Convenient for longer stays</p></div>
                         </article>
-                        
-                        <!-- Feature 8 - Parking Icon from Phosphor Icons -->
+                        <!-- 10. Smart TV -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M128,26A102,102,0,1,0,230,128,102.12,102.12,0,0,0,128,26Zm0,192a90,90,0,1,1,90-90A90.1,90.1,0,0,1,128,218Zm8-136H104a6,6,0,0,0-6,6v80a6,6,0,0,0,12,0V150h26a34,34,0,0,0,0-68Zm0,56H110V94h26a22,22,0,0,1,0,44Z"/>
-                            </svg>
-                            <h4 class="feature__title">Private Parking</h4>
-                            <p class="feature__description">Dedicated parking space for multiple vehicles</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M216,66H142.48l37.76-37.76a6,6,0,0,0-8.48-8.48L128,63.51,84.24,19.76a6,6,0,1,0-8.48,8.48L113.52,66H40A14,14,0,0,0,26,80V200a14,14,0,0,0,14,14H216a14,14,0,0,0,14-14V80A14,14,0,0,0,216,66Zm2,134a2,2,0,0,1-2,2H40a2,2,0,0,1-2-2V80a2,2,0,0,1,2-2H216a2,2,0,0,1,2,2Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Smart TV</h4><p class="feature__description">Television in living area</p></div>
                         </article>
-                        
-                        <!-- Feature 9 - Television Icon from Phosphor Icons -->
+                        <!-- 11. Private Parking -->
                         <article class="feature">
-                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M216,66H142.48l37.76-37.76a6,6,0,0,0-8.48-8.48L128,63.51,84.24,19.76a6,6,0,1,0-8.48,8.48L113.52,66H40A14,14,0,0,0,26,80V200a14,14,0,0,0,14,14H216a14,14,0,0,0,14-14V80A14,14,0,0,0,216,66Zm2,134a2,2,0,0,1-2,2H40a2,2,0,0,1-2-2V80a2,2,0,0,1,2-2H216a2,2,0,0,1,2,2Z"/>
-                            </svg>
-                            <h4 class="feature__title">TV</h4>
-                            <p class="feature__description">Television and comfortable seating area for relaxation</p>
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M240,106H228.64L201.25,56.06A14,14,0,0,0,189,48H67a14,14,0,0,0-12.29,8.06L27.36,106H16a6,6,0,0,0,0,12h9.59L22,131.07A14,14,0,0,0,18,141v35a14,14,0,0,0,14,14h18a14,14,0,0,0,14-14V162h128v14a14,14,0,0,0,14,14h18a14,14,0,0,0,14-14V141a14,14,0,0,0-4-9.93L230.41,118H240a6,6,0,0,0,0-12ZM65.22,60.68A2,2,0,0,1,67,60H189a2,2,0,0,1,1.75,1.15L215.28,106H40.72ZM52,176a2,2,0,0,1-2,2H32a2,2,0,0,1-2-2V162H52Zm174,2H208a2,2,0,0,1-2-2V162h22v14A2,2,0,0,1,226,178Zm2-37v9H28v-9a2,2,0,0,1,.57-1.42l5.14-5.15A2,2,0,0,1,35.13,134h185.74a2,2,0,0,1,1.42.59l5.14,5.15A2,2,0,0,1,228,141Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Private Parking</h4><p class="feature__description">Space for up to 3 cars</p></div>
+                        </article>
+                        <!-- 12. Remote Location -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M166.64,90.89a46,46,0,1,0-77.28,0L46.46,171.1a14,14,0,0,0,12.08,20.9H197.46a14,14,0,0,0,12.08-20.9ZM128,42a34,34,0,0,1,28.42,52.66L128,139.09,99.58,94.66A34,34,0,0,1,128,42Zm69.46,138H58.54a2,2,0,0,1-1.73-3l40.91-71.5L128,152l29.86-46.6L199.19,177A2,2,0,0,1,197.46,180ZM128,82a10,10,0,1,0-10-10A10,10,0,0,0,128,82Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Private & Remote</h4><p class="feature__description">Peaceful location with beautiful views</p></div>
                         </article>
                     </div>
                 </div>
@@ -598,7 +838,7 @@
                         <p>Villa Victorina is located in El Roque, next to the charming village of El Cotillo on the beautiful island of Fuerteventura. The island is renowned for its endless beaches, crystal-clear waters, and year-round pleasant weather - perfect for sun lovers and water sports enthusiasts.</p>
                         
                         
-                        <p>The villa is situated in a peaceful area with easy access to the island's most beautiful beaches. Perfect for those seeking tranquility and relaxation, with all amenities within reach.</p>
+                        <p>The villa is situated in a peaceful area with easy access to the island's most beautiful beaches. Perfect for those seeking tranquility and relaxation, with all amenities within reach. <a href="/explore-fuerteventura.html">Explore what Fuerteventura has to offer</a> or read about the <a href="/fuerteventura-history.html">island's fascinating history</a>.</p>
                     </div>
                     <div class="location__map">
                         <!-- Google Maps Embed -->
@@ -631,7 +871,8 @@
                             <img src="images/places/luca-iaconelli-hE7ZFcB8OcQ-unsplash.jpg"
                                  alt="Surf beach of El Cotillo with Atlantic waves"
                                  class="places__card-image"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800" height="534">
                         </div>
                         <div class="places__card-overlay">
                             <h3 class="places__card-title">Beaches of El Cotillo</h3>
@@ -645,7 +886,8 @@
                             <img src="images/places/rudi-bloemmen-uN-ibwxqegM-unsplash.jpg"
                                  alt="Charming whitewashed streets and seaside dining in El Cotillo"
                                  class="places__card-image"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800" height="533">
                         </div>
                         <div class="places__card-overlay">
                             <h3 class="places__card-title">El Cotillo Village</h3>
@@ -659,7 +901,8 @@
                             <img src="images/places/marcreation-QZt_ZUlVTJU-unsplash.jpg"
                                  alt="Sandy beach with Isla de Lobos in the distance"
                                  class="places__card-image"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800" height="1201">
                         </div>
                         <div class="places__card-overlay">
                             <h3 class="places__card-title">Corralejo & Isla de Lobos</h3>
@@ -673,7 +916,8 @@
                             <img src="images/places/sam-williams-bN49al3Th38-unsplash.jpg"
                                  alt="White sand dunes of the Parque Natural de Corralejo"
                                  class="places__card-image"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800" height="533">
                         </div>
                         <div class="places__card-overlay">
                             <h3 class="places__card-title">Dunes of Corralejo</h3>
@@ -687,7 +931,8 @@
                             <img src="images/places/michael-baccin-lngSLLuXosA-unsplash.jpg"
                                  alt="Rugged, vast Playa de Cofete with mountains in the background"
                                  class="places__card-image"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800" height="449">
                         </div>
                         <div class="places__card-overlay">
                             <h3 class="places__card-title">Playa de Cofete</h3>
@@ -801,16 +1046,28 @@
         </div>
         <div class="footer__bar">
             <div class="container">
-                <div class="footer__content">
-                    <p class="footer__text">&copy; 2026 Villa Victorina El Roque</p>
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <p class="footer__name">Villa Victorina</p>
+                        <p class="footer__location">El Roque, Fuerteventura</p>
+                    </div>
                     <nav class="footer__nav" aria-label="Footer navigation">
+                        <h4 class="footer__heading">Navigation</h4>
                         <a href="/" class="footer__link">Home</a>
                         <a href="/explore-fuerteventura.html" class="footer__link">Explore Fuerteventura</a>
                         <a href="/fuerteventura-history.html" class="footer__link">Fuerteventura History</a>
+                        <a href="/contact.html" class="footer__link">Contact</a>
                     </nav>
-                    <a href="https://arcotrust-holidaylettings.com/property/153-casa-victoria-el-roque/" class="btn btn--secondary" target="_blank" rel="nofollow noopener noreferrer" aria-label="Our local rental partner">
-                        Availability and Prices
-                    </a>
+                    <div class="footer__cta">
+                        <h4 class="footer__heading">Book Your Stay</h4>
+                        <p class="footer__cta-text">Direct booking through our local partner avoids platform fees.</p>
+                        <a href="https://arcotrust-holidaylettings.com/property/153-casa-victoria-el-roque/" class="btn btn--outline btn--footer" target="_blank" rel="nofollow noopener noreferrer">
+                            Availability & Prices
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">&copy; 2026 Villa Victorina El Roque</p>
                 </div>
             </div>
         </div>
@@ -1239,6 +1496,20 @@
         } else {
             video.addEventListener('canplay', init, { once: true });
         }
+    })();
+    </script>
+
+    <!-- Review read-more toggle -->
+    <script>
+    (function() {
+        var btn = document.querySelector('.review__toggle');
+        if (!btn) return;
+        var body = document.querySelector('.review__body');
+        btn.addEventListener('click', function() {
+            var expanded = body.classList.toggle('is-expanded');
+            btn.setAttribute('aria-expanded', expanded);
+            btn.textContent = expanded ? 'Read less' : 'Read more';
+        });
     })();
     </script>
 

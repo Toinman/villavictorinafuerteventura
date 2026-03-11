@@ -29,6 +29,28 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://villavictorinafuerteventura.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "The Complete Book of Fuerteventura",
+                "item": "https://villavictorinafuerteventura.com/fuerteventura-history.html"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Skip Link -->
@@ -46,6 +68,7 @@
                 <li><a href="/" class="nav__link">Home</a></li>
                 <li><a href="/explore-fuerteventura.html" class="nav__link">Explore Fuerteventura</a></li>
                 <li><a href="/fuerteventura-history.html" class="nav__link nav__link--active">Fuerteventura History</a></li>
+                <li><a href="/contact.html" class="nav__link">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -65,6 +88,21 @@
             <p class="hero__subtitle">The History Book</p>
         </div>
     </header>
+
+    <!-- Hero fade-in trigger -->
+    <script>
+    (function() {
+        var hero = document.querySelector('.hero');
+        var img = hero && hero.querySelector('.hero__image');
+        if (!img) return;
+        function reveal() {
+            img.classList.add('is-loaded');
+            hero.classList.add('is-revealed');
+        }
+        if (img.complete && img.naturalWidth) { reveal(); }
+        else { img.addEventListener('load', reveal, { once: true }); }
+    })();
+    </script>
 
     <!-- Breadcrumb -->
     <div class="container">
@@ -1459,6 +1497,26 @@
 
     </article>
 
+    <!-- CTA — Cross-link to villa and explore page -->
+    <section class="explore-cta">
+        <div class="explore-cta__background">
+            <img src="images/Villa El Roque - Noogar Design -111.jpg"
+                 alt="Villa Victorina at dusk with illuminated pool and terrace under a violet sunset sky"
+                 loading="lazy">
+        </div>
+        <div class="explore-cta__overlay"></div>
+        <div class="container">
+            <div class="explore-cta__content">
+                <h2 class="explore-cta__title">Experience Fuerteventura from Villa Victorina</h2>
+                <p class="explore-cta__text">Stay in El Roque, just minutes from El Cotillo's lagoons. Three bedrooms, a heated pool, and an island waiting to be explored.</p>
+                <div class="explore-cta__actions">
+                    <a href="/" class="btn btn--primary">View the Villa</a>
+                    <a href="/explore-fuerteventura.html" class="btn btn--outline">Explore the Island</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="footer__image-section">
@@ -1473,6 +1531,7 @@
                         <a href="/" class="footer__link">Home</a>
                         <a href="/explore-fuerteventura.html" class="footer__link">Explore Fuerteventura</a>
                         <a href="/fuerteventura-history.html" class="footer__link">Fuerteventura History</a>
+                        <a href="/contact.html" class="footer__link">Contact</a>
                     </nav>
                     <a href="https://arcotrust-holidaylettings.com/property/153-casa-victoria-el-roque/" class="btn btn--secondary" target="_blank" rel="nofollow noopener noreferrer" aria-label="Our local rental partner">
                         Availability and Prices
