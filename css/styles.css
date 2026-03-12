@@ -798,6 +798,10 @@ body:has(.lightbox--active) .nav__toggle {
         padding: var(--spacing-sm) 0;
     }
 
+    .scroll-video {
+        display: none;
+    }
+
     .gallery {
         padding: var(--spacing-sm) 0;
     }
