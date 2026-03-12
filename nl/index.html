@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Primary Meta Tags -->
+    <title>Villa Victorina El Roque - Privévilla Fuerteventura</title>
+    <meta name="title" content="Villa Victorina El Roque - Privévilla Fuerteventura">
+    <meta name="description" content="Elegante privévilla in El Roque met 3 slaapkamers, 3 badkamers en verwarmd buitenzwembad. Nabij El Cotillo — ongerepte stranden, ongerepte natuur, geen drukte.">
+    <meta name="keywords" content="privévilla El Roque, villa verwarmd zwembad Fuerteventura, luxe vakantiehuis Canarische Eilanden, El Roque villa huur, Fuerteventura privéhuis">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://villavictorinafuerteventura.com/nl/">
+
+    <!-- hreflang: language/region alternates -->
+    <link rel="alternate" hreflang="en" href="https://villavictorinafuerteventura.com/">
+    <link rel="alternate" hreflang="nl-NL" href="https://villavictorinafuerteventura.com/nl/">
+    <link rel="alternate" hreflang="nl-BE" href="https://villavictorinafuerteventura.com/be-nl/">
+    <link rel="alternate" hreflang="x-default" href="https://villavictorinafuerteventura.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://villavictorinafuerteventura.com/nl/">
+    <meta property="og:title" content="Villa Victorina El Roque - Privévilla met Verwarmd Buitenzwembad">
+    <meta property="og:description" content="Elegante privévilla in El Roque met 3 slaapkamers, 3 badkamers en verwarmd buitenzwembad. Nabij El Cotillo — ongerepte stranden, ongerepte natuur, geen drukte.">
+    <meta property="og:image" content="https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="nl_BE">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://villavictorinafuerteventura.com/nl/">
+    <meta property="twitter:title" content="Villa Victorina El Roque - Privévilla met Verwarmd Buitenzwembad">
+    <meta property="twitter:description" content="Elegante privévilla in El Roque met 3 slaapkamers, 3 badkamers en verwarmd buitenzwembad. Nabij El Cotillo — ongerepte stranden, ongerepte natuur, geen drukte.">
+    <meta property="twitter:image" content="https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts - Gloria Hallelujah for main title -->
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts - Elegant Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!--
+        Phosphor Icons - Inline SVG
+        Icons from Phosphor Icons (https://phosphoricons.com/)
+        Copyright (c) 2020-present Tobias Fried & Phosphor Icons Contributors
+        Licensed under MIT License (https://github.com/phosphor-icons/core/blob/main/LICENSE)
+        Icons used under light weight variant
+    -->
+
+    <!-- Critical CSS - Inline for performance -->
+    <style>
+        /* Critical CSS will be added inline here */
+        :root {
+            --color-white: #FFFFFF;
+            --color-off-white: #FAFAFA;
+            --color-beige: #F5E6D3;
+            --color-beige-dark: #E8DCC6;
+            --color-stone: #3A3A3A;
+            --color-stone-light: #4A4A4A;
+            --color-wood: #8B6F47;
+            --color-wood-light: #A0826D;
+            --color-blue: #6B9BD1;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--color-stone);
+            background-color: var(--color-white);
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--color-stone);
+            color: var(--color-white);
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Hero loading: dark base → image fade-in → content fade-in */
+        .hero,
+        .hero--page,
+        .explore-hero {
+            background-color: #1a1a2e;
+        }
+
+        .hero__image {
+            opacity: 0;
+            transition: opacity 0.6s ease-out;
+        }
+
+        .hero__image.is-loaded {
+            opacity: 1;
+        }
+
+        .hero__content {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.5s ease-out 0.15s, transform 0.5s ease-out 0.15s;
+        }
+
+        .hero__features {
+            opacity: 0;
+            transform: translateX(-50%) translateY(12px);
+            transition: opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s;
+        }
+
+        .hero.is-revealed .hero__content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero.is-revealed .hero__features {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Nav toggle – critical inline to prevent square-icon flash */
+        .nav__toggle {
+            position: fixed;
+            top: var(--spacing-sm);
+            right: var(--spacing-sm);
+            z-index: 10005;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px) saturate(1.8);
+            -webkit-backdrop-filter: blur(20px) saturate(1.8);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15),
+                        inset 0 0.5px 0 rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            transition: opacity 0.4s ease-out 0.25s, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .nav__toggle.is-visible,
+        .nav__toggle[aria-expanded="true"] {
+            opacity: 1;
+        }
+        .nav__toggle.nav--scrolled {
+            background: rgba(0, 0, 0, 0.06);
+            border-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+        .nav__toggle.nav--scrolled .nav__toggle-bar {
+            background: #3A3A3A;
+        }
+        .nav__toggle-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: background 0.3s ease;
+        }
+
+        /* Nav overlay – hidden by default to prevent flash of links */
+        .nav__overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Hero CTA button – glass style to prevent purple flash */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .btn--outline {
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(24px) saturate(1.6);
+            -webkit-backdrop-filter: blur(24px) saturate(1.6);
+            color: var(--color-white);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2),
+                        inset 0 0.5px 0 rgba(255, 255, 255, 0.15);
+            padding: 0.85rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 80px;
+            letter-spacing: 0.02em;
+        }
+    </style>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+
+    <!-- Structured Data - JSON-LD (VacationRental) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VacationRental",
+        "name": "Villa Victorina El Roque",
+        "description": "Elegante privévilla in El Roque met drie slaapkamers, drie badkamers en een verwarmd buitenzwembad. De villa beschikt over een terras, WiFi, eigen parkeergelegenheid en is volledig uitgerust met alle moderne voorzieningen voor een comfortabel verblijf.",
+        "url": "https://villavictorinafuerteventura.com/nl/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "El Roque",
+            "addressRegion": "Fuerteventura, Canary Islands",
+            "addressCountry": "ES"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.68574212663537",
+            "longitude": "-13.990865409927036"
+        },
+        "image": [
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-17.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-21.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-45.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-62.jpg",
+            "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-115.jpg"
+        ],
+        "amenityFeature": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Heated Outdoor Pool",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "WiFi",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Air Conditioning",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Fully Equipped Kitchen",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Terrace",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Washing Machine",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Dishwasher",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Private Parking",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Non-Smoking",
+                "value": true
+            }
+        ],
+        "numberOfRooms": 3,
+        "numberOfBathroomsTotal": 3,
+        "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": "150",
+            "unitCode": "MTK"
+        },
+        "petsAllowed": false,
+        "priceRange": "€€€"
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://villavictorinafuerteventura.com/nl/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Villa Victorina El Roque",
+        "url": "https://villavictorinafuerteventura.com/",
+        "logo": "https://villavictorinafuerteventura.com/favicon.svg",
+        "image": "https://villavictorinafuerteventura.com/images/Villa%20El%20Roque%20-%20Noogar%20Design%20-111.jpg",
+        "description": "Elegante privévilla in El Roque met 3 slaapkamers, 3 badkamers en verwarmd buitenzwembad. Nabij El Cotillo, Fuerteventura.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "El Roque",
+            "addressRegion": "Fuerteventura, Canary Islands",
+            "addressCountry": "ES"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.68574212663537",
+            "longitude": "-13.990865409927036"
+        },
+        "telephone": "+32477486326",
+        "email": "marie-christine@hvancauteren.be",
+        "sameAs": [
+            "https://www.instagram.com/villa_victorina"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+32477486326",
+            "email": "marie-christine@hvancauteren.be",
+            "contactType": "reservations",
+            "availableLanguage": ["English", "Dutch"]
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hoeveel gasten kan Villa Victorina ontvangen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Villa Victorina biedt comfortabel plaats aan maximaal 6 gasten verdeeld over 3 ruime slaapkamers, elk met een eigen ensuite badkamer."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Heeft Villa Victorina een verwarmd zwembad?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, Villa Victorina beschikt over een privé verwarmd buitenzwembad dat het hele jaar door beschikbaar is voor gasten."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hoe ver ligt Villa Victorina van het dichtstbijzijnde strand?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Villa Victorina ligt op slechts 2,2 km van Playa del Castillo strand. De charmante stranden en lagunes van El Cotillo zijn ook slechts enkele minuten rijden."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hoe ver ligt Villa Victorina van de luchthaven van Fuerteventura?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Villa Victorina ligt op ongeveer 42 km van de luchthaven van Fuerteventura (FUE), circa 35 minuten rijden."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welke voorzieningen zijn inbegrepen bij Villa Victorina?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De villa beschikt over een verwarmd buitenzwembad, WiFi, airconditioning, een volledig uitgeruste moderne keuken met vaatwasser, wasmachine, eigen parkeergelegenheid en een ruim terras met buitenzithoek."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Zijn huisdieren toegestaan in Villa Victorina?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nee, huisdieren zijn niet toegestaan in Villa Victorina. De villa is ook rookvrij."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Analytics - Placeholder (uncomment when ready) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+
+    <!-- Google Tag Manager - Placeholder (uncomment when ready) -->
+    <!--
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+    -->
+    <!-- Preload video for instant scroll-driven playback -->
+    <link rel="preload" as="video" href="/Video/villa-victorina-walkthrough.mp4" type="video/mp4">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2439299223253090');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2439299223253090&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) - Placeholder -->
+    <!--
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    -->
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Ga naar inhoud</a>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Hoofdnavigatie">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu openen">
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+        </button>
+        <div class="nav__overlay" id="nav-menu" aria-hidden="true">
+            <ul class="nav__list">
+                <li><a href="/nl/" class="nav__link nav__link--active">Home</a></li>
+                <li><a href="/explore-fuerteventura.html" class="nav__link">Ontdek Fuerteventura</a></li>
+                <li><a href="/fuerteventura-history.html" class="nav__link">Geschiedenis Fuerteventura</a></li>
+                <li><a href="/nl/contact.html" class="nav__link">Contact</a></li>
+            </ul>
+            <div class="nav__lang" aria-label="Kies taal">
+                <a href="/" class="nav__lang-item" data-locale="en"><span class="nav__lang-flag">&#x1F1EC;&#x1F1E7;</span> English</a>
+                <a href="/nl/" class="nav__lang-item nav__lang-item--active" data-locale="nl"><span class="nav__lang-flag">&#x1F1F3;&#x1F1F1;</span> Nederland</a>
+                <a href="/be-nl/" class="nav__lang-item" data-locale="be-nl"><span class="nav__lang-flag">&#x1F1E7;&#x1F1EA;</span> België (NL)</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" role="banner" id="main-content">
+        <div class="hero__image-container">
+            <img
+                src="/images/large/Villa El Roque - Noogar Design -111.jpg"
+                alt="Villa Victorina El Roque - Villa met 3 slaapkamers en verwarmd buitenzwembad in El Roque, Fuerteventura"
+                class="hero__image"
+                fetchpriority="high">
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__title">Villa Victorina <br><span class="hero__title-sub">El Roque</span></h1>
+            <a href="#reserveer" class="btn btn--outline btn--large" aria-label="Bekijk beschikbaarheid en prijzen van Villa Victorina El Roque">
+                Beschikbaarheid en Prijzen
+            </a>
+        </div>
+        <div class="hero__features">
+            <div class="hero__feature-item">
+                <svg class="hero__feature-icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M216,74H30V48a6,6,0,0,0-12,0V208a6,6,0,0,0,12,0V174H242v34a6,6,0,0,0,12,0V112A38,38,0,0,0,216,74ZM30,86h76v76H30Zm88,76V86h98a26,26,0,0,1,26,26v50Z"/>
+                </svg>
+                <span class="hero__feature-label">3 Slaapkamers</span>
+            </div>
+            <div class="hero__feature-item">
+                <svg class="hero__feature-icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M62,236a10,10,0,1,1-10-10A10,10,0,0,1,62,236Zm22-42a10,10,0,1,0,10,10A10,10,0,0,0,84,194Zm-64,0a10,10,0,1,0,10,10A10,10,0,0,0,20,194Zm32-32a10,10,0,1,0,10,10A10,10,0,0,0,52,162ZM254,40a6,6,0,0,1-6,6H218.49l-28.9,28.89L167.83,202.32a14,14,0,0,1-23.71,7.57l-98-98a14,14,0,0,1,7.6-23.71l127.4-21.76,30.65-30.65A6,6,0,0,1,216,34h32A6,6,0,0,1,254,40ZM176.66,79.34,55.7,100a2,2,0,0,0-1.11,3.39l98,98a2,2,0,0,0,3.39-1.09Z"/>
+                </svg>
+                <span class="hero__feature-label">3 Badkamers</span>
+            </div>
+            <div class="hero__feature-item">
+                <svg class="hero__feature-icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M243.6,148.8a6,6,0,0,1-8.4-1.2A53.58,53.58,0,0,0,192,126a6,6,0,0,1,0-12,26,26,0,1,0-25.18-32.5,6,6,0,0,1-11.62-3,38,38,0,1,1,59.91,39.63A65.69,65.69,0,0,1,244.8,140.4,6,6,0,0,1,243.6,148.8ZM189.19,213a6,6,0,0,1-2.19,8.2,5.9,5.9,0,0,1-3,.81,6,6,0,0,1-5.2-3,59,59,0,0,0-101.62,0,6,6,0,1,1-10.38-6A70.1,70.1,0,0,1,103,182.55a46,46,0,1,1,50.1,0A70.1,70.1,0,0,1,189.19,213ZM128,178a34,34,0,1,0-34-34A34,34,0,0,0,128,178ZM70,120a6,6,0,0,0-6-6A26,26,0,1,1,89.18,81.49a6,6,0,1,0,11.62-3,38,38,0,1,0-59.91,39.63A65.69,65.69,0,0,0,11.2,140.4a6,6,0,1,0,9.6,7.2A53.58,53.58,0,0,1,64,126,6,6,0,0,0,70,120Z"/>
+                </svg>
+                <span class="hero__feature-label">6 Gasten</span>
+            </div>
+            <div class="hero__feature-item">
+                <svg class="hero__feature-icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M240,210H222V131.17l5.76,5.76a6,6,0,0,0,8.48-8.49L137.9,30.09a14,14,0,0,0-19.8,0L19.76,128.44a6,6,0,0,0,8.48,8.49L34,131.17V210H16a6,6,0,0,0,0,12H240a6,6,0,0,0,0-12ZM46,119.17l80.58-80.59a2,2,0,0,1,2.84,0L210,119.17V210H158V152a6,6,0,0,0-6-6H104a6,6,0,0,0-6,6v58H46ZM146,210H110V158h36Z"/>
+                </svg>
+                <span class="hero__feature-label">Gebouwd 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero fade-in trigger -->
+    <script>
+    (function() {
+        var hero = document.querySelector('.hero');
+        var img = hero && hero.querySelector('.hero__image');
+        var navBtn = document.querySelector('.nav__toggle');
+        if (!img) return;
+        function reveal() {
+            img.classList.add('is-loaded');
+            hero.classList.add('is-revealed');
+            if (navBtn) navBtn.classList.add('is-visible');
+        }
+        if (img.complete && img.naturalWidth) { reveal(); }
+        else { img.addEventListener('load', reveal, { once: true }); }
+
+        // Toggle nav style when scrolled past hero
+        var threshold = hero.offsetHeight * 0.7;
+        var scrolled = false;
+        window.addEventListener('scroll', function() {
+            var past = window.scrollY > threshold;
+            if (past !== scrolled) {
+                scrolled = past;
+                navBtn.classList.toggle('nav--scrolled', past);
+            }
+        }, { passive: true });
+    })();
+    </script>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Guest Review -->
+        <section class="review" aria-label="Gastrecensie">
+            <div class="container">
+                <div class="review__card">
+                    <div class="review__stars" aria-label="5 van 5 sterren">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27 5.23 15.71l.91-5.32L2.27 6.62l5.34-.78z"/></svg>
+                    </div>
+                    <h3 class="review__title">Summer dreaming</h3>
+                    <div class="review__body">
+                        <p class="review__text">"My friend and I stayed at the gorgeous villa for 9 days this August and we absolutely fell in love. We are both 2 working single mamas from London with kiddos and the stay at the villa was exactly what our little families needed. The villa is spacious, light, has all amenities 2 mama's need to keep on top of their children. The pool is stunning, heated and endless entertainment for the kids. The views over El Roque and the gorgeous landscape from Fuerteventura is infinite from the villa, the villa and its location is a little slice of heaven. Cotillo beaches are a 6 minutes drive... I can only recommend this beautiful home to anyone! Big love to the owners! You did an amazing job!!"</p>
+                    </div>
+                    <button class="review__toggle" aria-expanded="false">Lees meer</button>
+                    <p class="review__author">Sofie Geradin</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top 10 Photo Gallery Section -->
+        <section id="gallery" class="gallery gallery--top" aria-labelledby="gallery-heading">
+            <div class="container">
+                <div class="gallery__masonry gallery__masonry--centered" id="galleryTop10">
+                    <!-- Top 10 photos will be dynamically loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Description Section -->
+        <section id="description" class="description" aria-labelledby="description-heading">
+            <div class="container">
+                <h2 id="description-heading" class="section__title">Welkom bij Villa Victorina El Roque</h2>
+                <div class="description__intro">
+                    <p>Villa Victorina El Roque is een elegante privé-vakantievilla gelegen in het charmante dorpje El Roque, Fuerteventura. Dit prachtige pand biedt drie ruime slaapkamers en drie badkamers, ideaal voor gezinnen of groepen die comfort en privacy zoeken.</p>
+                    <p>De villa beschikt over een verwarmd buitenzwembad, een terras met buitenzithoek en eigen parkeergelegenheid. Met WiFi, airconditioning in alle kamers en een volledig uitgeruste moderne keuken heeft u alles voor een onvergetelijke vakantie op de Canarische Eilanden.</p>
+                    <p>Op slechts 2,2 km van Playa del Castillo strand en 42 km van de luchthaven van Fuerteventura, combineert Villa Victorina El Roque de rust van een privéwoning met gemakkelijke toegang tot de mooiste plekken van het eiland.</p>
+                </div>
+
+                <!-- Meet Your Host -->
+                <div class="owner">
+                    <div class="owner__content">
+                        <div class="owner__image-wrapper">
+                            <img src="/images/meet_the_owner.jpg" alt="Marie-Christine Van Cauteren, eigenares van Villa Victorina" class="owner__image" loading="lazy" width="600" height="900" />
+                        </div>
+                        <div class="owner__text">
+                            <h3 class="owner__title">Maak Kennis met Uw Gastvrouw</h3>
+                            <p>Marie-Christine Van Cauteren bouwde Villa Victorina — vernoemd naar haar grootmoeder, Victorina — voor haar gezin, en voor andere gezinnen om te genieten van Fuerteventura in een rustige, privéomgeving.</p>
+                            <p>Heeft u vragen? Marie-Christine helpt u graag persoonlijk.</p>
+                            <div class="owner__contact">
+                                <a href="tel:+32477486326" class="owner__contact-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                                        <path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.17-1.4,8.12,8.12,0,0,0,.75-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/>
+                                    </svg>
+                                    +32 477 486 326
+                                </a>
+                                <a href="mailto:marie-christine@hvancauteren.be" class="owner__contact-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                                        <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/>
+                                    </svg>
+                                    marie-christine@hvancauteren.be
+                                </a>
+                            </div>
+                            <p class="owner__note">Gevestigd in Vlaanderen, België · Spreekt Engels & Nederlands</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenery and Views - Full-bleed drone flyover -->
+                <div class="scenery-flyover">
+                    <img src="/images/Scenery/Villa El Roque - Noogar Design -2-topview.jpg" alt="Luchtfoto van Villa Victorina El Roque met zwembad en omringend Fuerteventura landschap" class="scenery-flyover__image" loading="lazy" width="1600" height="1067">
+                    <div class="scenery-flyover__overlay"></div>
+                    <div class="scenery-flyover__content">
+                        <h3 class="scenery-flyover__title">Omgeving & Uitzichten</h3>
+                    </div>
+                </div>
+
+                <!-- Scenery Carousel -->
+                <div class="scenery-carousel">
+                    <div class="scenery-carousel__track">
+                        <div class="scenery-carousel__slide">
+                            <img src="/images/Scenery/Villa El Roque - Noogar Design -3.jpg" alt="Villa Victorina met zwembad en berglandschap van Fuerteventura" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="/images/Scenery/Villa El Roque - Noogar Design -6.jpg" alt="Villa Victorina omringd door het vulkanische woestijnlandschap van Fuerteventura" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="/images/Scenery/Villa El Roque - Noogar Design -15.jpg" alt="Uitzicht vanaf het terras over het zwembad richting El Roque dorp en bergen" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="/images/Scenery/Villa El Roque - Noogar Design -17.jpg" alt="Binnen-buiten wonen met uitzicht door schuifdeuren op zwembad en landschap" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="/images/Scenery/Villa El Roque - Noogar Design -64.jpg" alt="Zwembadterras met villa-architectuur en bergachtergrond" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
+                        </div>
+                        <div class="scenery-carousel__slide">
+                            <img src="/images/Scenery/Villa El Roque - Noogar Design -62.jpg" alt="Overdekt terras met loungemeubilair met uitzicht op zwembad en landschap" class="scenery-carousel__image" loading="lazy" width="1999" height="1332">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll-Driven Video -->
+                <div class="scroll-video">
+                    <div class="scroll-video__sticky">
+                        <video class="scroll-video__media" src="/Video/villa-victorina-walkthrough.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+                        <div class="scroll-video__overlay"></div>
+                        <div class="scroll-video__progress" aria-hidden="true">
+                            <div class="scroll-video__progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interior & Comfort - Full-bleed hero image -->
+                <div class="interior-flyover">
+                    <img src="/images/Villa El Roque - Noogar Design -108.jpg" alt="Villa Victorina in de schemering met verlicht zwembad, overdekt terras en moderne architectuur" class="interior-flyover__image" loading="lazy" width="1600" height="1067">
+                    <div class="interior-flyover__overlay"></div>
+                    <div class="interior-flyover__content">
+                        <h3 class="interior-flyover__title">Interieur &amp; Comfort</h3>
+                    </div>
+                </div>
+
+                <!-- Interior Carousel -->
+                <div class="interior-carousel">
+                    <div class="interior-carousel__track">
+                        <div class="interior-carousel__slide">
+                            <img src="/images/Villa El Roque - Noogar Design -35.jpg" alt="Slaapkamer met houten bedframe en uitzicht op bergen door vloer-tot-plafond glazen deuren" class="interior-carousel__image" loading="lazy" width="2048" height="1365">
+                        </div>
+                        <div class="interior-carousel__slide">
+                            <img src="/images/Villa El Roque - Noogar Design -45.jpg" alt="Ensuite badkamer met dubbele stenen wastafel, ovale spiegels en koperen kranen" class="interior-carousel__image" loading="lazy" width="1463" height="2048">
+                        </div>
+                        <div class="interior-carousel__slide">
+                            <img src="/images/Villa El Roque - Noogar Design -101.jpg" alt="Open woonkamer met witte bank, eiken salontafel en moderne keuken" class="interior-carousel__image" loading="lazy" width="2048" height="1365">
+                        </div>
+                        <div class="interior-carousel__slide">
+                            <img src="/images/Villa El Roque - Noogar Design -105.jpg" alt="Woon- en eetgedeelte gezien door open schuifdeuren met houten balkenplafond" class="interior-carousel__image" loading="lazy" width="2048" height="1365">
+                        </div>
+                        <div class="interior-carousel__slide">
+                            <img src="/images/Villa El Roque - Noogar Design -43.jpg" alt="Badkamer met stenen wastafel, koperen regendouche en glazen deur naar privéterras" class="interior-carousel__image" loading="lazy" width="2048" height="1365">
+                        </div>
+                        <div class="interior-carousel__slide">
+                            <img src="/images/Villa El Roque - Noogar Design -26.jpg" alt="Badkamer met witte wastafel, ronde spiegel, houten hanglamp en inloopdouche met tuinuitzicht" class="interior-carousel__image" loading="lazy" width="1365" height="2048">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram Feed -->
+                <div class="instagram">
+                    <h3 class="instagram__title">Volg Ons op Instagram</h3>
+                    <p class="instagram__subtitle">Ontdek het laatste van Villa Victorina</p>
+                    <div class="instagram__feed" id="instagram-feed">
+                        <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+                        <script type="text/javascript">
+                        /* curator-feed-default-feed-layout */
+                        (function(){
+                        var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+                        i.src="https://cdn.curator.io/published/dececfc3-b527-4511-beb4-7a180bcee0f9.js";
+                        e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+                        })();
+                        </script>
+                    </div>
+                    <a href="https://www.instagram.com/villa_victorina/" target="_blank" rel="noopener noreferrer" class="instagram__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                            <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/>
+                        </svg>
+                        @villa_victorina
+                    </a>
+                </div>
+
+                <!-- Explore Banner -->
+                <section class="explore-banner">
+                    <div class="explore-banner__background">
+                        <img src="/images/Villa El Roque - Noogar Design -111.jpg" alt="Villa Victorina in de schemering met verlicht zwembad en terras onder een violette avondhemel" class="explore-banner__image" loading="lazy">
+                        <div class="explore-banner__overlay"></div>
+                    </div>
+                    <div class="container explore-banner__container">
+                        <div class="explore-banner__left">
+                            <h2 class="explore-banner__title">Uw Uitvalsbasis</h2>
+                            <p class="explore-banner__text">Villa Victorina ligt in El Roque, op slechts enkele minuten van de lagunes van El Cotillo en binnen bereik van elk landschap op Fuerteventura.</p>
+                        </div>
+                        <div class="explore-banner__right">
+                            <a href="/explore-fuerteventura.html" class="btn btn--outline-light">
+                                <span>Ontdek het Eiland</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="btn__icon">
+                                    <path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/>
+                                </svg>
+                            </a>
+                            <a href="https://arcotrust-holidaylettings.com/property/153-casa-victoria-el-roque/" class="btn btn--primary" target="_blank" rel="nofollow noopener noreferrer">
+                                <span>Bekijk Prijzen &amp; Beschikbaarheid</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="btn__icon">
+                                    <path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="features">
+                    <h3 class="features__title">Voorzieningen & Kenmerken</h3>
+                    <div class="features__list">
+                        <!-- 1. Heated Pool -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M88,147.39a6,6,0,0,0,6-6V126h68v17.29a6,6,0,0,0,12,0V32a6,6,0,0,0-12,0V50H94V32a6,6,0,0,0-12,0V141.39A6,6,0,0,0,88,147.39ZM94,114V94h68v20Zm68-52V82H94V62ZM26,168a6,6,0,0,1,6-6c13.82,0,21,4.79,27.33,9,5.63,3.75,10.48,7,20.67,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.32-9s21,4.79,27.33,9c5.63,3.75,10.49,7,20.68,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.33-9a6,6,0,0,1,0,12c-10.18,0-15,3.24-20.67,7-6.34,4.22-13.52,9-27.33,9s-21-4.79-27.33-9c-5.63-3.75-10.49-7-20.68-7s-15,3.24-20.67,7c-6.33,4.22-13.51,9-27.32,9s-21-4.79-27.33-9C47,177.24,42.18,174,32,174A6,6,0,0,1,26,168Zm204,40a6,6,0,0,1-6,6c-10.18,0-15,3.24-20.67,7-6.34,4.22-13.52,9-27.33,9s-21-4.79-27.33-9c-5.63-3.75-10.49-7-20.68-7s-15,3.24-20.67,7c-6.33,4.22-13.51,9-27.32,9s-21-4.79-27.33-9C47,217.24,42.18,214,32,214a6,6,0,0,1,0-12c13.82,0,21,4.79,27.33,9,5.63,3.75,10.48,7,20.67,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.32-9s21,4.79,27.33,9c5.63,3.75,10.49,7,20.68,7s15-3.24,20.67-7c6.33-4.22,13.51-9,27.33-9A6,6,0,0,1,230,208Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Verwarmd Buitenzwembad</h4><p class="feature__description">Privé verwarmd zwembad, het hele jaar geopend</p></div>
+                        </article>
+                        <!-- 2. Bedrooms -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M216,74H30V48a6,6,0,0,0-12,0V208a6,6,0,0,0,12,0V174H242v34a6,6,0,0,0,12,0V112A38,38,0,0,0,216,74ZM30,86h76v76H30Zm88,76V86h98a26,26,0,0,1,26,26v50Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">3 Slaapkamers</h4><p class="feature__description">Ruime kamers met premium beddengoed</p></div>
+                        </article>
+                        <!-- 3. Bathrooms -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M62,236a10,10,0,1,1-10-10A10,10,0,0,1,62,236Zm22-42a10,10,0,1,0,10,10A10,10,0,0,0,84,194Zm-64,0a10,10,0,1,0,10,10A10,10,0,0,0,20,194Zm32-32a10,10,0,1,0,10,10A10,10,0,0,0,52,162ZM254,40a6,6,0,0,1-6,6H218.49l-28.9,28.89L167.83,202.32a14,14,0,0,1-23.71,7.57l-98-98a14,14,0,0,1,7.6-23.71l127.4-21.76,30.65-30.65A6,6,0,0,1,216,34h32A6,6,0,0,1,254,40ZM176.66,79.34,55.7,100a2,2,0,0,0-1.11,3.39l98,98a2,2,0,0,0,3.39-1.09Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">3 Ensuite Badkamers</h4><p class="feature__description">Privé douche, wastafel en toilet per slaapkamer</p></div>
+                        </article>
+                        <!-- 4. Guests -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M243.6,148.8a6,6,0,0,1-8.4-1.2A53.58,53.58,0,0,0,192,126a6,6,0,0,1,0-12,26,26,0,1,0-25.18-32.5,6,6,0,0,1-11.62-3,38,38,0,1,1,59.91,39.63A65.69,65.69,0,0,1,244.8,140.4,6,6,0,0,1,243.6,148.8ZM189.19,213a6,6,0,0,1-2.19,8.2,5.9,5.9,0,0,1-3,.81,6,6,0,0,1-5.2-3,59,59,0,0,0-101.62,0,6,6,0,1,1-10.38-6A70.1,70.1,0,0,1,103,182.55a46,46,0,1,1,50.1,0A70.1,70.1,0,0,1,189.19,213ZM128,178a34,34,0,1,0-34-34A34,34,0,0,0,128,178ZM70,120a6,6,0,0,0-6-6A26,26,0,1,1,89.18,81.49a6,6,0,1,0,11.62-3,38,38,0,1,0-59.91,39.63A65.69,65.69,0,0,0,11.2,140.4a6,6,0,1,0,9.6,7.2A53.58,53.58,0,0,1,64,126,6,6,0,0,0,70,120Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Tot 6 Gasten</h4><p class="feature__description">Ideaal voor gezinnen of groepen</p></div>
+                        </article>
+                        <!-- 5. Kitchen -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M90,48V16a6,6,0,0,1,12,0V48a6,6,0,0,1-12,0Zm38,6a6,6,0,0,0,6-6V16a6,6,0,0,0-12,0V48A6,6,0,0,0,128,54Zm32,0a6,6,0,0,0,6-6V16a6,6,0,0,0-12,0V48A6,6,0,0,0,160,54Zm91.6,46.8L222,123v61a30,30,0,0,1-30,30H64a30,30,0,0,1-30-30V123L4.4,100.8a6,6,0,0,1,7.2-9.6L34,108V80a6,6,0,0,1,6-6H216a6,6,0,0,1,6,6v28l22.4-16.8a6,6,0,0,1,7.2,9.6ZM210,86H46v98a18,18,0,0,0,18,18H192a18,18,0,0,0,18-18Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Volledig Uitgeruste Keuken</h4><p class="feature__description">Vaatwasser, oven, magnetron en al het kookgerei</p></div>
+                        </article>
+                        <!-- 6. WiFi -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M138,204a10,10,0,1,1-10-10A10,10,0,0,1,138,204ZM235.81,88.55a170,170,0,0,0-215.62,0,6,6,0,1,0,7.62,9.27,158,158,0,0,1,200.38,0,6,6,0,1,0,7.62-9.27Zm-32.08,35.79a122,122,0,0,0-151.46,0,6,6,0,0,0,7.46,9.41,110,110,0,0,1,136.54,0A6,6,0,0,0,200,135a6,6,0,0,0,3.73-10.7Zm-32.2,35.81a74,74,0,0,0-87.06,0,6,6,0,0,0,7.06,9.7,62,62,0,0,1,72.94,0,6,6,0,0,0,8.38-1.32A6,6,0,0,0,171.53,160.15Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Snel WiFi</h4><p class="feature__description">Snel internet in de hele villa</p></div>
+                        </article>
+                        <!-- 7. Air Conditioning -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M221.83,150.57a6,6,0,0,1-4.4,7.26l-26.62,6.54,7,26.08a6,6,0,0,1-4.24,7.35,6.4,6.4,0,0,1-1.55.2,6,6,0,0,1-5.8-4.45L178.27,164,134,138.39v51.13l22.24,22.24a6,6,0,1,1-8.48,8.48L128,200.49l-19.76,19.75a6,6,0,0,1-8.48-8.48L122,189.52V138.39L77.73,164l-7.93,29.6A6,6,0,0,1,64,198a6.4,6.4,0,0,1-1.55-.2,6,6,0,0,1-4.24-7.35l7-26.08-26.62-6.54a6,6,0,0,1,2.86-11.66l30.23,7.43L116,128,71.66,102.4l-30.23,7.43A5.88,5.88,0,0,1,40,110a6,6,0,0,1-1.43-11.83l26.62-6.54-7-26.08a6,6,0,1,1,11.59-3.1l7.93,29.6L122,117.61V66.48L99.76,44.24a6,6,0,0,1,8.48-8.48L128,55.51l19.76-19.75a6,6,0,0,1,8.48,8.48L134,66.48v51.13l44.27-25.56,7.93-29.6a6,6,0,1,1,11.59,3.1l-7,26.08,26.62,6.54A6,6,0,0,1,216,110a5.88,5.88,0,0,1-1.43-.17l-30.23-7.43L140,128l44.34,25.6,30.23-7.43A6,6,0,0,1,221.83,150.57Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Airconditioning</h4><p class="feature__description">Klimaatregeling in alle kamers</p></div>
+                        </article>
+                        <!-- 8. Terrace -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M122,40V16a6,6,0,0,1,12,0V40a6,6,0,0,1-12,0Zm68,88a62,62,0,1,1-62-62A62.07,62.07,0,0,1,190,128Zm-12,0a50,50,0,1,0-50,50A50.06,50.06,0,0,0,178,128ZM59.76,68.24a6,6,0,1,0,8.48-8.48l-16-16a6,6,0,0,0-8.48,8.48Zm0,119.52-16,16a6,6,0,1,0,8.48,8.48l16-16a6,6,0,1,0-8.48-8.48ZM192,70a6,6,0,0,0,4.24-1.76l16-16a6,6,0,0,0-8.48-8.48l-16,16A6,6,0,0,0,192,70Zm4.24,117.76a6,6,0,0,0-8.48,8.48l16,16a6,6,0,0,0,8.48-8.48ZM46,128a6,6,0,0,0-6-6H16a6,6,0,0,0,0,12H40A6,6,0,0,0,46,128Zm82,82a6,6,0,0,0-6,6v24a6,6,0,0,0,12,0V216A6,6,0,0,0,128,210Zm112-88H216a6,6,0,0,0,0,12h24a6,6,0,0,0,0-12Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Terras & Buitenzithoek</h4><p class="feature__description">Ruim terras met loungemeubilair</p></div>
+                        </article>
+                        <!-- 9. Washing Machine -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M208,34H48A14,14,0,0,0,34,48V208a14,14,0,0,0,14,14H208a14,14,0,0,0,14-14V48A14,14,0,0,0,208,34Zm2,174a2,2,0,0,1-2,2H48a2,2,0,0,1-2-2V48a2,2,0,0,1,2-2H208a2,2,0,0,1,2,2ZM128,66a62,62,0,1,0,62,62A62.07,62.07,0,0,0,128,66Zm0,112a50,50,0,1,1,50-50A50.06,50.06,0,0,1,128,178ZM198,68a10,10,0,1,1-10-10A10,10,0,0,1,198,68Zm-73.76,48.24-16,16a6,6,0,0,1-8.48-8.48l16-16a6,6,0,0,1,8.48,8.48Zm32-.48a6,6,0,0,1,0,8.48l-32,32a6,6,0,0,1-8.48-8.48l32-32A6,6,0,0,1,156.24,115.76Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Wasmachine</h4><p class="feature__description">Handig voor langere verblijven</p></div>
+                        </article>
+                        <!-- 10. Smart TV -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M216,66H142.48l37.76-37.76a6,6,0,0,0-8.48-8.48L128,63.51,84.24,19.76a6,6,0,1,0-8.48,8.48L113.52,66H40A14,14,0,0,0,26,80V200a14,14,0,0,0,14,14H216a14,14,0,0,0,14-14V80A14,14,0,0,0,216,66Zm2,134a2,2,0,0,1-2,2H40a2,2,0,0,1-2-2V80a2,2,0,0,1,2-2H216a2,2,0,0,1,2,2Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Smart TV</h4><p class="feature__description">Televisie in de woonkamer</p></div>
+                        </article>
+                        <!-- 11. Private Parking -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M240,106H228.64L201.25,56.06A14,14,0,0,0,189,48H67a14,14,0,0,0-12.29,8.06L27.36,106H16a6,6,0,0,0,0,12h9.59L22,131.07A14,14,0,0,0,18,141v35a14,14,0,0,0,14,14h18a14,14,0,0,0,14-14V162h128v14a14,14,0,0,0,14,14h18a14,14,0,0,0,14-14V141a14,14,0,0,0-4-9.93L230.41,118H240a6,6,0,0,0,0-12ZM65.22,60.68A2,2,0,0,1,67,60H189a2,2,0,0,1,1.75,1.15L215.28,106H40.72ZM52,176a2,2,0,0,1-2,2H32a2,2,0,0,1-2-2V162H52Zm174,2H208a2,2,0,0,1-2-2V162h22v14A2,2,0,0,1,226,178Zm2-37v9H28v-9a2,2,0,0,1,.57-1.42l5.14-5.15A2,2,0,0,1,35.13,134h185.74a2,2,0,0,1,1.42.59l5.14,5.15A2,2,0,0,1,228,141Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Eigen Parkeergelegenheid</h4><p class="feature__description">Ruimte voor maximaal 3 auto's</p></div>
+                        </article>
+                        <!-- 12. Remote Location -->
+                        <article class="feature">
+                            <svg class="feature__icon" viewBox="0 0 256 256" fill="currentColor"><path d="M166.64,90.89a46,46,0,1,0-77.28,0L46.46,171.1a14,14,0,0,0,12.08,20.9H197.46a14,14,0,0,0,12.08-20.9ZM128,42a34,34,0,0,1,28.42,52.66L128,139.09,99.58,94.66A34,34,0,0,1,128,42Zm69.46,138H58.54a2,2,0,0,1-1.73-3l40.91-71.5L128,152l29.86-46.6L199.19,177A2,2,0,0,1,197.46,180ZM128,82a10,10,0,1,0-10-10A10,10,0,0,0,128,82Z"/></svg>
+                            <div class="feature__text"><h4 class="feature__title">Privé & Afgelegen</h4><p class="feature__description">Rustige locatie met prachtig uitzicht</p></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="reserveer" class="cta" aria-labelledby="cta-heading">
+            <div class="cta__background">
+                <img src="/images/thumbs/Villa El Roque - Noogar Design -115.jpg" alt="Villa Victorina El Roque zwembad uitzicht" class="cta__image" loading="lazy">
+                <div class="cta__overlay"></div>
+            </div>
+            <div class="container cta__container">
+                <div class="cta__left">
+                    <h2 id="cta-heading" class="cta__title">Boek Uw Verblijf</h2>
+                    <p class="cta__text">Villa Victorina wordt beheerd door Manuel Rimondi van Unam Holiday Lettings. Hoewel de villa zichtbaar zal zijn op veel grote online verhuurplatforms, is <strong>rechtstreeks boeken goedkoper</strong> omdat er geen platformkosten worden gerekend.</p>
+                </div>
+                <div class="cta__right">
+                    <a href="https://arcotrust-holidaylettings.com/property/153-casa-victoria-el-roque/" class="btn btn--primary" target="_blank" rel="nofollow noopener noreferrer" aria-label="Bekijk prijzen en beschikbaarheid">
+                        <span>Bekijk Prijzen &amp; Beschikbaarheid</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="btn__icon">
+                            <path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="location" aria-labelledby="location-heading">
+            <div class="container">
+                <h2 id="location-heading" class="section__title">Locatie</h2>
+                <div class="location__content">
+                    <div class="location__text">
+                        <h3>El Roque, Fuerteventura</h3>
+                        <p>Villa Victorina ligt in El Roque, naast het charmante dorpje El Cotillo aan de prachtige kust van Fuerteventura. Het eiland staat bekend om zijn eindeloze stranden, kristalhelder water en het hele jaar door aangenaam weer — perfect voor zonliefhebbers en watersporters.</p>
+
+
+                        <p>De villa ligt op een rustige plek met gemakkelijke toegang tot de mooiste stranden van het eiland. Perfect voor wie rust en ontspanning zoekt, met alle voorzieningen binnen handbereik. <a href="/explore-fuerteventura.html">Ontdek wat Fuerteventura te bieden heeft</a> of lees over <a href="/fuerteventura-history.html">de fascinerende geschiedenis van het eiland</a>.</p>
+                    </div>
+                    <div class="location__map">
+                        <!-- Google Maps Embed -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d10956.156027024089!2d-13.991485730314018!3d28.685563998477242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQxJzA4LjAiTiAxM8KwNTknMjcuMCJX!5e1!3m2!1sen!2sbe!4v1769979236819!5m2!1sen!2sbe"
+                            width="100%"
+                            height="400"
+                            style="border:0; border-radius: 12px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Locatie van Villa Victorina El Roque op Google Maps">
+                        </iframe>
+                        <p class="location__map-note">Omdat de bouw van onze villa pas recent is voltooid, is de villa nog niet zichtbaar op satellietbeelden</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Places to Visit Section -->
+        <section id="places" class="places" aria-labelledby="places-heading">
+            <div class="container">
+                <h2 id="places-heading" class="section__title">Bezienswaardigheden</h2>
+            </div>
+            <div class="places__scroll-container">
+                <div class="places__track">
+
+                    <article class="places__card" tabindex="0" aria-label="De surf- en familiestranden van El Cotillo">
+                        <div class="places__card-image-wrapper">
+                            <img src="/images/places/luca-iaconelli-hE7ZFcB8OcQ-unsplash.jpg"
+                                 alt="Surfstrand van El Cotillo met Atlantische golven"
+                                 class="places__card-image"
+                                 loading="lazy"
+                                 width="800" height="534">
+                        </div>
+                        <div class="places__card-overlay">
+                            <h3 class="places__card-title">Stranden van El Cotillo</h3>
+                            <p class="places__card-text">El Cotillo biedt twee werelden in één dorp. Aan de oostkant liggen kalme turquoise lagunes — perfect voor gezinnen met kinderen. Ondiep water, wit zand, nauwelijks stroming. Aan de westkust rollen Atlantische golven aan met enkele van de beste surfspots van Fuerteventura. Of je nu beginner bent of gevorderd, de omstandigheden zijn vrijwel het hele jaar ideaal.</p>
+                            <span class="places__card-credit">Foto <a href="https://unsplash.com/@luxdamore" rel="nofollow noopener noreferrer">Luca Iaconelli</a> / Unsplash</span>
+                        </div>
+                    </article>
+
+                    <article class="places__card" tabindex="0" aria-label="Restaurants en het pittoreske karakter van El Cotillo">
+                        <div class="places__card-image-wrapper">
+                            <img src="/images/places/rudi-bloemmen-uN-ibwxqegM-unsplash.jpg"
+                                 alt="Charmante witgekalkte straatjes en restaurants aan zee in El Cotillo"
+                                 class="places__card-image"
+                                 loading="lazy"
+                                 width="800" height="533">
+                        </div>
+                        <div class="places__card-overlay">
+                            <h3 class="places__card-title">El Cotillo Dorp</h3>
+                            <p class="places__card-text">Een vissersdorp dat zijn karakter heeft behouden. Verse vis rechtstreeks uit de haven, kleine tapasbars, zonsondergang op een terras met uitzicht op zee. Geen flitsende boulevards, maar witgekalkte straatjes en een ontspannen Canarische sfeer. 's Avonds wandel je van restaurant naar wijnbar — geen drukte, geen stress.</p>
+                            <span class="places__card-credit">Foto <a href="https://unsplash.com/@rudi_b" rel="nofollow noopener noreferrer">Rudi Bloemmen</a> / Unsplash</span>
+                        </div>
+                    </article>
+
+                    <article class="places__card" tabindex="0" aria-label="Corralejo, Lobos en de veerboot naar Lanzarote">
+                        <div class="places__card-image-wrapper">
+                            <img src="/images/places/marcreation-QZt_ZUlVTJU-unsplash.jpg"
+                                 alt="Zandstrand met Isla de Lobos in de verte"
+                                 class="places__card-image"
+                                 loading="lazy"
+                                 width="800" height="1201">
+                        </div>
+                        <div class="places__card-overlay">
+                            <h3 class="places__card-title">Corralejo & Isla de Lobos</h3>
+                            <p class="places__card-text">Op 20 minuten rijden ligt Corralejo: levendiger, met winkels, een jachthaven en een vertrekpunt voor avontuur. Vanuit de haven neem je de boot naar Isla de Lobos — een beschermd natuurgebied met kristalhelder water en wandelpaden — of naar Lanzarote voor een dagtrip vol lavalandschappen en César Manrique-architectuur.</p>
+                            <span class="places__card-credit">Foto <a href="https://unsplash.com/@marcreation" rel="nofollow noopener noreferrer">Marcreation</a> / Unsplash</span>
+                        </div>
+                    </article>
+
+                    <article class="places__card" tabindex="0" aria-label="De iconische duinen van Corralejo">
+                        <div class="places__card-image-wrapper">
+                            <img src="/images/places/sam-williams-bN49al3Th38-unsplash.jpg"
+                                 alt="Witte zandduinen van het Parque Natural de Corralejo"
+                                 class="places__card-image"
+                                 loading="lazy"
+                                 width="800" height="533">
+                        </div>
+                        <div class="places__card-overlay">
+                            <h3 class="places__card-title">Duinen van Corralejo</h3>
+                            <p class="places__card-text">De duinen van het Parque Natural de Corralejo zijn uniek in Europa. Kilometers wit zand, azuurblauwe oceaan, een bijna woestijnachtig landschap. Perfect voor een ochtendwandeling, fotoshoot, of simpelweg om te pauzeren en stil te staan. Het voelt alsof je op een andere planeet bent.</p>
+                            <span class="places__card-credit">Foto <a href="https://unsplash.com/@sam_williams" rel="nofollow noopener noreferrer">Sam Williams</a> / Unsplash</span>
+                        </div>
+                    </article>
+
+                    <article class="places__card" tabindex="0" aria-label="Playa de Cofete">
+                        <div class="places__card-image-wrapper">
+                            <img src="/images/places/michael-baccin-lngSLLuXosA-unsplash.jpg"
+                                 alt="Ruig, uitgestrekt Playa de Cofete met bergen op de achtergrond"
+                                 class="places__card-image"
+                                 loading="lazy"
+                                 width="800" height="449">
+                        </div>
+                        <div class="places__card-overlay">
+                            <h3 class="places__card-title">Playa de Cofete</h3>
+                            <p class="places__card-text">Puur, ruig en adembenemend. Een van de meest spectaculaire stranden van de Canarische Eilanden. Geen hotels. Geen drukte. Alleen bergen, oceaan en eindeloze ruimte. De rit ernaartoe over onverharde wegen maakt het avontuur compleet.</p>
+                            <span class="places__card-credit">Foto <a href="https://unsplash.com/@michael_baccin" rel="nofollow noopener noreferrer">Michael Baccin</a> / Unsplash</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Full Photo Gallery Section -->
+    <section id="gallery-full" class="gallery gallery--full" aria-labelledby="gallery-full-heading">
+        <div class="container">
+            <h2 id="gallery-full-heading" class="section__title">Alle Foto's</h2>
+            <div class="gallery__masonry gallery__masonry--centered" id="galleryFull">
+                <!-- All remaining photos will be dynamically loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox/Slideshow -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotogalerij diashow">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Sluiten">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+                <path d="M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z"/>
+            </svg>
+        </button>
+        <button class="lightbox__prev" id="lightboxPrev" aria-label="Vorige foto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+                <path d="M222,128a6,6,0,0,1-6,6H54.49l61.75,61.76a6,6,0,1,1-8.48,8.48l-72-72a6,6,0,0,1,0-8.48l72-72a6,6,0,0,1,8.48,8.48L54.49,122H216A6,6,0,0,1,222,128Z"/>
+            </svg>
+        </button>
+        <button class="lightbox__next" id="lightboxNext" aria-label="Volgende foto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+                <path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/>
+            </svg>
+        </button>
+        <div class="lightbox__content">
+            <img src="" alt="Villa Victorina El Roque foto" class="lightbox__image" id="lightboxImage">
+            <div class="lightbox__counter" id="lightboxCounter"></div>
+        </div>
+    </div>
+
+    <!-- Places Lightbox -->
+    <div class="places-lightbox" id="placesLightbox" role="dialog" aria-modal="true" aria-label="Details bezienswaardigheid">
+        <div class="places-lightbox__backdrop" id="placesLightboxBackdrop"></div>
+        <div class="places-lightbox__panel">
+            <button class="places-lightbox__close" id="placesLightboxClose" aria-label="Sluiten">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+                    <path d="M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z"/>
+                </svg>
+            </button>
+            <button class="places-lightbox__prev" id="placesLightboxPrev" aria-label="Vorige bezienswaardigheid">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+                    <path d="M222,128a6,6,0,0,1-6,6H54.49l61.75,61.76a6,6,0,1,1-8.48,8.48l-72-72a6,6,0,0,1,0-8.48l72-72a6,6,0,0,1,8.48,8.48L54.49,122H216A6,6,0,0,1,222,128Z"/>
+                </svg>
+            </button>
+            <button class="places-lightbox__next" id="placesLightboxNext" aria-label="Volgende bezienswaardigheid">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor">
+                    <path d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/>
+                </svg>
+            </button>
+            <div class="places-lightbox__image-side">
+                <img src="" alt="Bezienswaardigheden nabij Villa Victorina" class="places-lightbox__image" id="placesLightboxImage">
+            </div>
+            <div class="places-lightbox__text-side">
+                <p class="places-lightbox__title" id="placesLightboxTitle"></p>
+                <p class="places-lightbox__description" id="placesLightboxDesc"></p>
+                <span class="places-lightbox__counter" id="placesLightboxCounter"></span>
+                <span class="places-lightbox__credit" id="placesLightboxCredit"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- House Rules Section -->
+    <section class="house-rules" aria-labelledby="house-rules-heading">
+        <div class="container">
+            <h2 id="house-rules-heading" class="section__title">Huisregels</h2>
+            <div class="house-rules__content">
+                <div class="house-rules__item">
+                    <!-- Smoking Icon from Phosphor Icons -->
+                    <svg class="house-rules__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Z"/>
+                        <path d="M128,40a88,88,0,0,0-88,88,8,8,0,0,1-16,0A104,104,0,0,1,128,32a8,8,0,0,1,0,16Z"/>
+                        <path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152Z"/>
+                    </svg>
+                    <p class="house-rules__text">Niet roken</p>
+                </div>
+                <div class="house-rules__item">
+                    <!-- Dog Icon from Phosphor Icons -->
+                    <svg class="house-rules__icon" viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M104,144a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,144Z"/>
+                        <path d="M216,144v64a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V144a16,16,0,0,1,16-16H200A16,16,0,0,1,216,144Zm-16,0H56v64H200Z"/>
+                        <path d="M96,80V64a32,32,0,0,1,64,0V80a8,8,0,0,1-16,0V64a16,16,0,0,0-32,0V80a8,8,0,0,1-16,0Z"/>
+                    </svg>
+                    <p class="house-rules__text">Geen huisdieren</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__image-section">
+            <img src="/images/Villa El Roque - Noogar Design -114.jpg" alt="Villa Victorina El Roque verlicht in de avond met zwembad" class="footer__image" loading="lazy">
+            <div class="footer__image-overlay"></div>
+        </div>
+        <div class="footer__bar">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <p class="footer__name">Villa Victorina</p>
+                        <p class="footer__location">El Roque, Fuerteventura</p>
+                    </div>
+                    <nav class="footer__nav" aria-label="Voettekst navigatie">
+                        <h4 class="footer__heading">Navigatie</h4>
+                        <a href="/nl/" class="footer__link">Home</a>
+                        <a href="/explore-fuerteventura.html" class="footer__link">Ontdek Fuerteventura</a>
+                        <a href="/fuerteventura-history.html" class="footer__link">Geschiedenis Fuerteventura</a>
+                        <a href="/nl/contact.html" class="footer__link">Contact</a>
+                    </nav>
+                    <div class="footer__cta">
+                        <h4 class="footer__heading">Boek Uw Verblijf</h4>
+                        <p class="footer__cta-text">Rechtstreeks boeken via onze lokale partner voorkomt platformkosten.</p>
+                        <a href="https://arcotrust-holidaylettings.com/property/153-casa-victoria-el-roque/" class="btn btn--outline btn--footer" target="_blank" rel="nofollow noopener noreferrer">
+                            Bekijk Prijzen &amp; Beschikbaarheid
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">&copy; 2026 Villa Victorina El Roque</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery & Lightbox Script -->
+    <script>
+    (function() {
+        'use strict';
+
+        // All photos array - complete collection (only existing photos)
+        // First 12 are top photos for the top gallery section
+        const photos = [
+            // Top 12 photos
+            'Villa El Roque - Noogar Design -17.jpg',
+            'Villa El Roque - Noogar Design -21.jpg',
+            'Villa El Roque - Noogar Design -24.jpg',
+            'Villa El Roque - Noogar Design -35.jpg',
+            'Villa El Roque - Noogar Design -45.jpg',
+            'Villa El Roque - Noogar Design -46.jpg',
+            'Villa El Roque - Noogar Design -51.jpg',
+            'Villa El Roque - Noogar Design -62.jpg',
+            'Villa El Roque - Noogar Design -74.jpg',
+            'Villa El Roque - Noogar Design -105.jpg',
+            'Villa El Roque - Noogar Design -106.jpg',
+            'Villa El Roque - Noogar Design -111.jpg',
+            // Rest of the photos for full gallery
+            'Villa El Roque - Noogar Design -10.jpg',
+            'Villa El Roque - Noogar Design -11.jpg',
+            'Villa El Roque - Noogar Design -12.jpg',
+            'Villa El Roque - Noogar Design -14.jpg',
+            'Villa El Roque - Noogar Design -15.jpg',
+            'Villa El Roque - Noogar Design -19.jpg',
+            'Villa El Roque - Noogar Design -22.jpg',
+            'Villa El Roque - Noogar Design -26.jpg',
+            'Villa El Roque - Noogar Design -30.jpg',
+            'Villa El Roque - Noogar Design -31.jpg',
+            'Villa El Roque - Noogar Design -37.jpg',
+            'Villa El Roque - Noogar Design -38.jpg',
+            'Villa El Roque - Noogar Design -43.jpg',
+            'Villa El Roque - Noogar Design -47.jpg',
+            'Villa El Roque - Noogar Design -52.jpg',
+            'Villa El Roque - Noogar Design -53.jpg',
+            'Villa El Roque - Noogar Design -56.jpg',
+            'Villa El Roque - Noogar Design -64.jpg',
+            'Villa El Roque - Noogar Design -66.jpg',
+            'Villa El Roque - Noogar Design -68.jpg',
+            'Villa El Roque - Noogar Design -101.jpg',
+            'Villa El Roque - Noogar Design -103.jpg',
+            'Villa El Roque - Noogar Design -104.jpg',
+            'Villa El Roque - Noogar Design -107.jpg',
+            'Villa El Roque - Noogar Design -108.jpg',
+            'Villa El Roque - Noogar Design -109.jpg',
+            'Villa El Roque - Noogar Design -112.jpg',
+            'Villa El Roque - Noogar Design -114.jpg',
+            'Villa El Roque - Noogar Design -119.jpg'
+        ];
+
+        // Top 5 photos shown above the fold
+        const top12Photos = photos.slice(0, 5);
+        const remainingPhotos = photos.slice(5);
+
+        let currentIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        // DOM Elements
+        const galleryTop10 = document.getElementById('galleryTop10');
+        const galleryFull = document.getElementById('galleryFull');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        // Load top 12 gallery
+        function loadTop12Gallery() {
+            top12Photos.forEach((photo, i) => {
+                const actualIndex = photos.indexOf(photo);
+                const img = document.createElement('img');
+                img.src = `/images/thumbs/${photo}`;
+                img.alt = `Villa Victorina El Roque - Foto ${actualIndex + 1}`;
+                img.className = 'gallery__photo';
+                img.loading = 'eager'; // All top 12 eager load
+                img.addEventListener('click', () => openLightbox(actualIndex));
+                img.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openLightbox(actualIndex);
+                    }
+                });
+                img.tabIndex = 0;
+                galleryTop10.appendChild(img);
+            });
+        }
+
+        // Load full gallery (remaining photos)
+        function loadFullGallery() {
+            remainingPhotos.forEach((photo, i) => {
+                const actualIndex = photos.indexOf(photo);
+                const img = document.createElement('img');
+                img.src = `/images/thumbs/${photo}`;
+                img.alt = `Villa Victorina El Roque - Foto ${actualIndex + 1}`;
+                img.className = 'gallery__photo';
+                img.loading = 'lazy';
+                img.addEventListener('click', () => openLightbox(actualIndex));
+                img.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openLightbox(actualIndex);
+                    }
+                });
+                img.tabIndex = 0;
+                galleryFull.appendChild(img);
+            });
+        }
+
+        // Open lightbox
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            lightbox.classList.add('lightbox--active');
+            document.body.style.overflow = 'hidden';
+            lightboxClose.focus();
+        }
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.classList.remove('lightbox--active');
+            document.body.style.overflow = '';
+        }
+
+        // Update lightbox image
+        function updateLightbox() {
+            lightboxImage.src = `/images/${photos[currentIndex]}`;
+            lightboxImage.alt = `Villa Victorina El Roque - Foto ${currentIndex + 1}`;
+            lightboxCounter.textContent = `${currentIndex + 1} / ${photos.length}`;
+        }
+
+        // Navigate to previous image
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+            updateLightbox();
+        }
+
+        // Navigate to next image
+        function showNext() {
+            currentIndex = (currentIndex + 1) % photos.length;
+            updateLightbox();
+        }
+
+        // Event listeners
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', showPrev);
+        lightboxNext.addEventListener('click', showNext);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('lightbox--active')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowLeft') showPrev();
+            else if (e.key === 'ArrowRight') showNext();
+        });
+
+        // Click outside to close
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Touch gestures for mobile
+        lightbox.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    showNext(); // Swipe left
+                } else {
+                    showPrev(); // Swipe right
+                }
+            }
+        }
+
+        // Initialize both galleries
+        loadTop12Gallery();
+        loadFullGallery();
+    })();
+    </script>
+
+    <!-- Places to Visit - Lightbox & interaction -->
+    <script>
+    (function() {
+        'use strict';
+
+        var cards = document.querySelectorAll('.places__card');
+        var lightbox = document.getElementById('placesLightbox');
+        var lightboxImage = document.getElementById('placesLightboxImage');
+        var lightboxTitle = document.getElementById('placesLightboxTitle');
+        var lightboxDesc = document.getElementById('placesLightboxDesc');
+        var lightboxCounter = document.getElementById('placesLightboxCounter');
+        var lightboxCredit = document.getElementById('placesLightboxCredit');
+        var currentPlaceIndex = 0;
+
+        // Build places data from DOM
+        var places = [];
+        cards.forEach(function(card) {
+            var img = card.querySelector('.places__card-image');
+            var title = card.querySelector('.places__card-title');
+            var text = card.querySelector('.places__card-text');
+            var credit = card.querySelector('.places__card-credit');
+            places.push({
+                src: img ? img.src : '',
+                alt: img ? img.alt : '',
+                title: title ? title.textContent : '',
+                text: text ? text.textContent : '',
+                creditHTML: credit ? credit.innerHTML : ''
+            });
+        });
+
+        function openPlacesLightbox(index) {
+            currentPlaceIndex = index;
+            updatePlacesLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePlacesLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updatePlacesLightbox() {
+            var place = places[currentPlaceIndex];
+            lightboxImage.src = place.src;
+            lightboxImage.alt = place.alt;
+            lightboxTitle.textContent = place.title;
+            lightboxDesc.textContent = place.text;
+            lightboxCounter.textContent = (currentPlaceIndex + 1) + ' / ' + places.length;
+            lightboxCredit.innerHTML = place.creditHTML;
+            lightboxCredit.style.display = place.creditHTML ? '' : 'none';
+        }
+
+        function showPrevPlace() {
+            currentPlaceIndex = (currentPlaceIndex - 1 + places.length) % places.length;
+            updatePlacesLightbox();
+        }
+
+        function showNextPlace() {
+            currentPlaceIndex = (currentPlaceIndex + 1) % places.length;
+            updatePlacesLightbox();
+        }
+
+        // Card click opens lightbox
+        cards.forEach(function(card, index) {
+            card.addEventListener('click', function() {
+                openPlacesLightbox(index);
+            });
+        });
+
+        // Keyboard on cards
+        cards.forEach(function(card, index) {
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openPlacesLightbox(index);
+                }
+            });
+        });
+
+        // Lightbox controls
+        document.getElementById('placesLightboxClose').addEventListener('click', closePlacesLightbox);
+        document.getElementById('placesLightboxBackdrop').addEventListener('click', closePlacesLightbox);
+        document.getElementById('placesLightboxPrev').addEventListener('click', showPrevPlace);
+        document.getElementById('placesLightboxNext').addEventListener('click', showNextPlace);
+
+        // Keyboard navigation in lightbox
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closePlacesLightbox();
+            if (e.key === 'ArrowLeft') showPrevPlace();
+            if (e.key === 'ArrowRight') showNextPlace();
+        });
+
+        // Touch swipe in lightbox
+        var touchStartX = 0;
+        lightbox.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', function(e) {
+            var diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) showNextPlace();
+                else showPrevPlace();
+            }
+        }, { passive: true });
+    })();
+    </script>
+
+    <!-- Scroll-Driven Video: autoplay + scroll-velocity boost, no scroll hijacking -->
+    <script>
+    (function() {
+        'use strict';
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var container = document.querySelector('.scroll-video');
+        var video = container ? container.querySelector('.scroll-video__media') : null;
+        var progressBar = container ? container.querySelector('.scroll-video__progress-bar') : null;
+        if (!container || !video) return;
+
+        // ── Config ──
+        var BASE_RATE      = 0.8;   // Playback speed when idle (no scrolling)
+        var SCROLL_MULT    = 0.008; // Extra rate per px/s of scroll speed
+        var MAX_RATE       = 4;     // Playback rate cap
+        var VELOCITY_SMOOTH = 0.85; // Smoothing factor for velocity measurement
+
+        // ── State ──
+        var isVisible      = false;
+        var scrollVelocity = 0;
+        var lastScrollY    = window.pageYOffset;
+        var lastTime       = performance.now();
+        var rafId          = null;
+
+        // ── Intersection Observer: play when visible, pause when not ──
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                isVisible = entry.isIntersecting;
+                if (isVisible) {
+                    startPlayback();
+                } else if (!video.paused) {
+                    video.pause();
+                    stopLoop();
+                }
+            });
+        }, { threshold: 0.15 });
+        observer.observe(container);
+
+        function startPlayback() {
+            if (video.readyState < 2 || !video.paused) return;
+            video.playbackRate = BASE_RATE;
+            video.play().catch(function() {});
+            lastScrollY = window.pageYOffset;
+            lastTime = performance.now();
+            if (!rafId) rafId = requestAnimationFrame(tick);
+        }
+
+        function stopLoop() {
+            if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        }
+
+        // ── Animation loop: measure scroll velocity → adjust playback rate ──
+        function tick(now) {
+            if (!isVisible) { rafId = null; return; }
+
+            var dt = (now - lastTime) / 1000;
+            lastTime = now;
+
+            // Measure scroll speed (px/s)
+            var currentY = window.pageYOffset;
+            if (dt > 0 && dt < 0.1) {
+                var instant = Math.abs(currentY - lastScrollY) / dt;
+                scrollVelocity = scrollVelocity * VELOCITY_SMOOTH + instant * (1 - VELOCITY_SMOOTH);
+            }
+            lastScrollY = currentY;
+
+            // Map velocity → playback rate
+            var rate = BASE_RATE + scrollVelocity * SCROLL_MULT;
+            video.playbackRate = Math.min(MAX_RATE, rate);
+
+            // Decay when idle
+            if (scrollVelocity < 1) scrollVelocity = 0;
+
+            // Progress bar
+            if (progressBar && video.duration) {
+                progressBar.style.width = (video.currentTime / video.duration * 100) + '%';
+            }
+
+            // Loop when ended
+            if (video.ended) {
+                video.currentTime = 0;
+                video.play().catch(function() {});
+            }
+
+            rafId = requestAnimationFrame(tick);
+        }
+
+        // ── Init ──
+        function init() {
+            // If already visible (e.g. mid-page load), start
+            if (isVisible && video.readyState >= 2) startPlayback();
+        }
+
+        if (video.readyState >= 1) {
+            init();
+        } else {
+            video.addEventListener('canplay', init, { once: true });
+        }
+    })();
+    </script>
+
+    <!-- Review read-more toggle -->
+    <script>
+    (function() {
+        var btn = document.querySelector('.review__toggle');
+        if (!btn) return;
+        var body = document.querySelector('.review__body');
+        btn.addEventListener('click', function() {
+            var expanded = body.classList.toggle('is-expanded');
+            btn.setAttribute('aria-expanded', expanded);
+            btn.textContent = expanded ? 'Lees minder' : 'Lees meer';
+        });
+    })();
+    </script>
+
+    <!-- Menu -->
+    <script src="/js/menu.js" defer></script>
+
+    <!-- i18n: Language switcher handler -->
+    <script src="/js/i18n.js" defer></script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "35cdca1045834adeb18d1348f831998f"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+
+</body>
+</html>
