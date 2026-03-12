@@ -353,11 +353,14 @@ section {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0;
     visibility: hidden;
     transition: opacity var(--transition-slow), visibility var(--transition-slow);
+    overflow-y: auto;
+    padding: var(--spacing-xl) 0;
 }
 
 .nav--open .nav__overlay {
@@ -407,6 +410,51 @@ section {
 .nav__link--active::after {
     width: 100%;
     left: 0;
+}
+
+/* Language Switcher in Nav Overlay */
+.nav__lang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    width: 100%;
+    max-width: 200px;
+}
+
+.nav__lang-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color var(--transition-base), opacity var(--transition-base);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.25rem 0;
+}
+
+.nav__lang-item:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.nav__lang-item--active {
+    color: var(--color-white);
+    font-weight: 500;
+    cursor: default;
+}
+
+.nav__lang-flag {
+    font-size: 1.25rem;
+    line-height: 1;
 }
 
 /* Body scroll lock when menu open */

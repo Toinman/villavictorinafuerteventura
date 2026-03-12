@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- Homepage -->
+    <!-- Homepage (EN) -->
     <url>
         <loc>https://villavictorinafuerteventura.com/</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://villavictorinafuerteventura.com/"/>
+        <xhtml:link rel="alternate" hreflang="nl-NL" href="https://villavictorinafuerteventura.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="nl-BE" href="https://villavictorinafuerteventura.com/be-nl/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://villavictorinafuerteventura.com/"/>
 
         <!-- Images for rich snippets -->
         <image:image>
@@ -47,6 +53,32 @@
         </image:image>
     </url>
 
+    <!-- Homepage (NL) -->
+    <url>
+        <loc>https://villavictorinafuerteventura.com/nl/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://villavictorinafuerteventura.com/"/>
+        <xhtml:link rel="alternate" hreflang="nl-NL" href="https://villavictorinafuerteventura.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="nl-BE" href="https://villavictorinafuerteventura.com/be-nl/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://villavictorinafuerteventura.com/"/>
+    </url>
+
+    <!-- Homepage (BE-NL) -->
+    <url>
+        <loc>https://villavictorinafuerteventura.com/be-nl/</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://villavictorinafuerteventura.com/"/>
+        <xhtml:link rel="alternate" hreflang="nl-NL" href="https://villavictorinafuerteventura.com/nl/"/>
+        <xhtml:link rel="alternate" hreflang="nl-BE" href="https://villavictorinafuerteventura.com/be-nl/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://villavictorinafuerteventura.com/"/>
+    </url>
+
     <!-- Explore Fuerteventura Guide -->
     <url>
         <loc>https://villavictorinafuerteventura.com/explore-fuerteventura.html</loc>
@@ -83,12 +115,43 @@
         <priority>0.6</priority>
     </url>
 
-    <!-- Contact -->
+    <!-- Contact (EN) -->
     <url>
         <loc>https://villavictorinafuerteventura.com/contact.html</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://villavictorinafuerteventura.com/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="nl-NL" href="https://villavictorinafuerteventura.com/nl/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="nl-BE" href="https://villavictorinafuerteventura.com/be-nl/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://villavictorinafuerteventura.com/contact.html"/>
+    </url>
+
+    <!-- Contact (NL) -->
+    <url>
+        <loc>https://villavictorinafuerteventura.com/nl/contact.html</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://villavictorinafuerteventura.com/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="nl-NL" href="https://villavictorinafuerteventura.com/nl/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="nl-BE" href="https://villavictorinafuerteventura.com/be-nl/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://villavictorinafuerteventura.com/contact.html"/>
+    </url>
+
+    <!-- Contact (BE-NL) -->
+    <url>
+        <loc>https://villavictorinafuerteventura.com/be-nl/contact.html</loc>
+        <lastmod>2026-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://villavictorinafuerteventura.com/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="nl-NL" href="https://villavictorinafuerteventura.com/nl/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="nl-BE" href="https://villavictorinafuerteventura.com/be-nl/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://villavictorinafuerteventura.com/contact.html"/>
     </url>
 
 </urlset>
