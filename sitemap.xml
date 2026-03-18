@@ -6,7 +6,7 @@
     <!-- Homepage (EN) -->
     <url>
         <loc>https://villavictorinafuerteventura.com/</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-03-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
 
@@ -56,7 +56,7 @@
     <!-- Homepage (NL) -->
     <url>
         <loc>https://villavictorinafuerteventura.com/nl/</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-03-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
 
@@ -69,7 +69,7 @@
     <!-- Homepage (BE-NL) -->
     <url>
         <loc>https://villavictorinafuerteventura.com/be-nl/</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-03-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
 
@@ -82,7 +82,7 @@
     <!-- Explore Fuerteventura Guide -->
     <url>
         <loc>https://villavictorinafuerteventura.com/explore-fuerteventura.html</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
 
@@ -96,7 +96,7 @@
     <!-- Fuerteventura History -->
     <url>
         <loc>https://villavictorinafuerteventura.com/fuerteventura-history.html</loc>
-        <lastmod>2026-03-11</lastmod>
+        <lastmod>2026-03-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
 
@@ -107,18 +107,12 @@
         </image:image>
     </url>
 
-    <!-- Blog Article -->
-    <url>
-        <loc>https://villavictorinafuerteventura.com/fuerteventura-blog-article.html</loc>
-        <lastmod>2026-03-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
+    <!-- Blog Article: excluded until proper HTML head is added -->
 
     <!-- Contact (EN) -->
     <url>
         <loc>https://villavictorinafuerteventura.com/contact.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-03-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
 
@@ -131,7 +125,7 @@
     <!-- Contact (NL) -->
     <url>
         <loc>https://villavictorinafuerteventura.com/nl/contact.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-03-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
 
@@ -144,7 +138,7 @@
     <!-- Contact (BE-NL) -->
     <url>
         <loc>https://villavictorinafuerteventura.com/be-nl/contact.html</loc>
-        <lastmod>2026-03-12</lastmod>
+        <lastmod>2026-03-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
 
