@@ -479,6 +479,7 @@
     <!-- i18n: Auto-detect browser language (EN pages only) -->
     <script>
     (function(){
+        if(/bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduck|facebookexternalhit|twitterbot|linkedinbot/i.test(navigator.userAgent))return;
         var k='vv-locale',s=localStorage.getItem(k);
         if(s)return; // User already chose a locale, don't redirect
         var l=(navigator.language||'').toLowerCase();
