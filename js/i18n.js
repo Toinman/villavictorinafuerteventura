@@ -12,14 +12,16 @@
     var LOCALES = {
         'en':    '/',
         'nl':    '/nl/',
-        'be-nl': '/be-nl/'
+        'be-nl': '/be-nl/',
+        'de':    '/de/'
     };
 
     // Which pages exist per locale (relative to locale base)
     var PAGES = {
         'en':    ['', 'contact.html'],
         'nl':    ['', 'contact.html'],
-        'be-nl': ['', 'contact.html']
+        'be-nl': ['', 'contact.html'],
+        'de':    ['', 'contact.html']
     };
 
     /**

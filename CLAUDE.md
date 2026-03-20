@@ -6,7 +6,7 @@
 - **Branch**: `main`
 - **Deploy**: Push to `main` triggers automatic deployment via GitHub Pages
   ```bash
-  cd "/Users/robi2-test/Library/Mobile Documents/com~apple~CloudDocs/Victorina"
+  cd ~/Projects/Victorina
   git add <files>
   git commit -m "message"
   git push origin main
@@ -32,6 +32,8 @@
 - `nl/contact.html` — Dutch (NL) contact page
 - `be-nl/index.html` — Belgian Dutch (BE-NL) homepage
 - `be-nl/contact.html` — Belgian Dutch (BE-NL) contact page
+- `de/index.html` — German (DE) homepage
+- `de/contact.html` — German (DE) contact page
 
 ## Architecture & Gotchas
 - **Critical inline CSS**: Homepage loads stylesheet async via `media="print" onload="this.media='all'"`. Any above-the-fold styles (nav toggle, hero, buttons, overlay) MUST also exist in the critical inline `<style>` block in `<head>` to prevent FOUC
@@ -46,15 +48,38 @@
 
 ## i18n (Multi-Language)
 - **Architecture**: Country+language subdirectories, EN at root (default)
-- **Active locales**: `en` (root), `nl` (/nl/), `be-nl` (/be-nl/)
-- **Future locales**: `be-fr`, `fr`, `de`, `es`, `it`, `se`, `no`, `fi`, `dk`
-- **Pages per locale**: `index.html`, `contact.html` (explore + history later)
+- **Active locales (4)**: `en` (root), `nl` (/nl/), `be-nl` (/be-nl/), `de` (/de/)
+- **Future locales**: `be-fr`, `fr`, `es`, `it`, `se`, `no`, `fi`, `dk`
+- **Translated pages per locale**: `index.html`, `contact.html` (explore + history are EN-only for now)
 - **Shared resources**: CSS, JS, images, video — all via absolute paths (`/css/...`, `/images/...`)
 - **Auto-detect**: Inline script in `<head>` of EN pages only — checks `navigator.language`, redirects via `location.replace()`. Respects `localStorage('vv-locale')` preference
 - **Language switcher**: Flag + country name in hamburger menu (`.nav__lang`), handled by `js/i18n.js`
-- **SEO**: hreflang tags (en, nl-NL, nl-BE, x-default) on all translated pages, og:locale, canonical per version, sitemap xhtml:link cross-references
+- **SEO**: hreflang tags (en, nl-NL, nl-BE, de, x-default) on all translated pages, og:locale, canonical per version, sitemap xhtml:link cross-references
 - **Key files**: `js/i18n.js` (switcher logic + localStorage), `css/styles.css` (.nav__lang styles)
-- **Adding a new locale**: 1) Create `/{locale}/` directory with translated pages, 2) Add locale to `js/i18n.js` LOCALES + PAGES, 3) Update hreflang on ALL existing pages, 4) Update sitemap.xml, 5) Add to language switcher HTML on all pages
+
+### ⚠️ Editing translated pages — ALWAYS apply to all 4 locales
+Any content or layout change to a translated page (homepage, contact) MUST be applied to all versions:
+1. `index.html` (EN, root)
+2. `nl/index.html` (NL)
+3. `be-nl/index.html` (BE-NL — identical Dutch text as NL, different hreflang/og:locale/canonical)
+4. `de/index.html` (DE — German translation)
+
+Same for contact: `contact.html`, `nl/contact.html`, `be-nl/contact.html`, `de/contact.html`
+
+**Checklist per change:**
+- [ ] Apply change to all 4 locale versions of the page
+- [ ] Keep translations accurate (DE = formal Sie-vorm German)
+- [ ] Update `sitemap.xml` if URLs or lastmod dates change
+- [ ] Verify no console errors via preview tools
+
+### Adding a new locale
+1. Create `/{locale}/` directory with translated pages
+2. Add locale to `js/i18n.js` LOCALES + PAGES
+3. Update hreflang tags on ALL existing pages (all locales)
+4. Update `sitemap.xml` with new URLs + xhtml:link cross-references
+5. Add to language switcher HTML on ALL pages (all locales)
+6. Add locale codes to auto-detect script in EN `<head>` pages
+7. Update og:locale:alternate on all pages
 
 ## User Preferences
 - Prefers Apple-style glassmorphism design
